@@ -63,17 +63,26 @@ You can always share information with us and look forward to it.
 - `.exe` Leagueoflegends.Launcher
 
 ## 2. DependencyProperty
-1. Naming Rules
-2. DependencyProperty.Register
-3. PropertyMetadata
+1. Class
+2. Naming Rules
+3. DependencyProperty.Register
+4. PropertyMetadata
 
-### 2.1. Naming Rules
+### 2.1. Class
+
+```public sealed class DependencyProperty
+{
+
+}   
+```
+
+### 2.2. Naming Rules
 
 
 
-### 2.2. DependencyProperty.Register
+### 2.3. DependencyProperty.Register
 
-### 2.3. PropertyMetadata
+### 2.4. PropertyMetadata
 
 ## 3. Example
 
