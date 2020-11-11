@@ -71,7 +71,7 @@ You can always share information with us and look forward to it.
 ### 2.1. Class Structure
 namespace: `System.Windows`   
 assembly: `WindowsBase.dll`
-class access: `sealed`
+class access: `sealed`   
 first version: `3.0'
 ```csharp
 namespace System.Windows
