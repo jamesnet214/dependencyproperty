@@ -5,7 +5,7 @@
 [![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](http://ansicolortags.readthedocs.io/?badge=latest)
 [![Github all releases](https://img.shields.io/github/downloads/Naereen/StrapDown.js/total.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
 
-> We have developed League of Legends, one of the most famous games in the world, using WPF/C# as much as possible and shared it with everyone here at Github.
+> This is absolutely necessary to further boost your wpf technology and to provide good quality products.
 >
 > Never without DependencyProperty can the WPF be dealt with vigorously.
 
