@@ -62,42 +62,19 @@ You can always share information with us and look forward to it.
 - `.dll` Leagueoflegends.Data
 - `.exe` Leagueoflegends.Launcher
 
-## 2. Layout Window
-1. Install View
-2. Login View
-3. Main Center View
+## 2. DependencyProperty
+1. Naming Rules
+2. DependencyProperty.Register
+3. PropertyMetadata
 
-### 2.1. Install View
-
-<table>
-  <tr>
-    <th colspan="2">
-      Install View</br>(It is shown when the program first runs)
-    </th>
-  </tr>  
-  <tr>
-    <th>
-      Original
-    </th>
-    <th>
-      WPF Style
-    </th>
-  </tr>
-  <tr>
-    <td><image src="https://bl6pap003files.storage.live.com/y4mCDKPex3S6z8mR4DMT6HQjUpmWbZ400m2d7Rp_i8UdxYKar58TypWUQn2wbnpZK7ZKejj1nS38pPpKKP02YNSupohA31_q5aoLG3AFAQNX8LuDenB17fqB5Q6EGEshB0kqM06MnYs7srk-fMXdrLsbNoN0bfz887Pw-0kiLGI8ePFFa-iqLOldeMHYW40uMg-zE3Vrzb_Rra0InWEXV8ezA/0001.png?psid=1&width=400&height=498"/></td>
-    <td><image src="https://bl6pap003files.storage.live.com/y4mCDKPex3S6z8mR4DMT6HQjUpmWbZ400m2d7Rp_i8UdxYKar58TypWUQn2wbnpZK7ZKejj1nS38pPpKKP02YNSupohA31_q5aoLG3AFAQNX8LuDenB17fqB5Q6EGEshB0kqM06MnYs7srk-fMXdrLsbNoN0bfz887Pw-0kiLGI8ePFFa-iqLOldeMHYW40uMg-zE3Vrzb_Rra0InWEXV8ezA/0001.png?psid=1&width=400&height=498"/></td>
-  <tr/>
-  <tr>
-    <td align="center">Unknown Development Format</td>
-    <td align="center">XAML</br>eXtensible Application Markup Language</td>
-  </tr>
-</table>
+### 2.1. Naming Rules
 
 
-### 2.2. Login View
 
-### 2.3. Main Center View
+### 2.2. DependencyProperty.Register
 
-## 3. Interface
+### 2.3. PropertyMetadata
 
-## 4. Data Model
+## 3. Example
+
+## 4. Opensource
