@@ -68,13 +68,16 @@ You can always share information with us and look forward to it.
 3. DependencyProperty.Register
 4. PropertyMetadata
 
-### 2.1. Class
+### 2.1. Class Structure
 
 ```
-public sealed class DependencyProperty
+namespace System.Windows
 {
+    public sealed class DependencyProperty
+    {
 
-}   
+    }   
+}
 ```
 
 ### 2.2. Naming Rules
