@@ -70,7 +70,8 @@ You can always share information with us and look forward to it.
 
 ### 2.1. Class
 
-```public sealed class DependencyProperty
+```
+public sealed class DependencyProperty
 {
 
 }   
