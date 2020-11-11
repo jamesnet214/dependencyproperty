@@ -1,4 +1,4 @@
-# WPF DependencyProperty
+# DependencyProperty
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 [![GitHub version](https://badge.fury.io/gh/Naereen%2FStrapDown.js.svg)](https://github.com/Naereen/StrapDown.js)
@@ -70,7 +70,7 @@ You can always share information with us and look forward to it.
 
 ### 2.1. Class Structure
 
-```
+```csharp
 namespace System.Windows
 {
     public sealed class DependencyProperty
