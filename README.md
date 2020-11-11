@@ -69,7 +69,8 @@ You can always share information with us and look forward to it.
 4. PropertyMetadata
 
 ### 2.1. Class Structure
-
+namespace: `System.Windows.dll`
+class access: `sealed`
 ```csharp
 namespace System.Windows
 {
