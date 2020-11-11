@@ -98,15 +98,15 @@ namespace System.Windows
 
 ### 3.1. Standard Type
 
-```
-		public int AspectRatioWidth
-        {
-            get { return (int)this.GetValue(AspectRatioWidthProperty); }
-            set { this.SetValue(AspectRatioWidthProperty, value); }
-        }
+```csharp
+public int AspectRatioWidth
+{
+    get { return (int)this.GetValue(AspectRatioWidthProperty); }
+    set { this.SetValue(AspectRatioWidthProperty, value); }
+}
 
-        public static readonly DependencyProperty AspectRatioWidthProperty = DependencyProperty.Register(
-          "AspectRatioWidth", typeof(int), typeof(CampImage), new PropertyMetadata(16));
+public static readonly DependencyProperty AspectRatioWidthProperty = DependencyProperty.Register(
+  "AspectRatioWidth", typeof(int), typeof(CampImage), new PropertyMetadata(16));
 ```
 
 ## 4. Opensource
