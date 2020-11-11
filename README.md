@@ -7,7 +7,7 @@
 
 > We have developed League of Legends, one of the most famous games in the world, using WPF/C# as much as possible and shared it with everyone here at Github.
 >
-> WPF's productivity and quality are excellent. And we feel a great attachment and love for WPF. Therefore, I hope that WPF will be used in many different fields and environments and that our activities will help you a little bit, It would be the greatest joy we can get.
+> Never without DependencyProperty can the WPF be dealt with vigorously.
 
 ### Our Information
 We are very ordinary developers. And we need to communicate with you.   
