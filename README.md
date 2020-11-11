@@ -70,9 +70,9 @@ You can always share information with us and look forward to it.
 
 ### 2.1. Class Structure
 namespace: `System.Windows`   
-assembly: `WindowsBase.dll`
+assembly: `WindowsBase.dll`   
 class access: `sealed`   
-first version: `3.0'
+first version: `.net 3.0`
 ```csharp
 namespace System.Windows
 {
