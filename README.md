@@ -39,14 +39,16 @@ namespace System.Windows
 ### 3.1. Standard Type
 
 ```csharp
-public int AspectRatioWidth
+public class Profile : Control
 {
-    get { return (int)this.GetValue(AspectRatioWidthProperty); }
-    set { this.SetValue(AspectRatioWidthProperty, value); }
-}
+    public int Age
+    {
+        get { return (int)this.GetValue(AgeProperty); }
+        set { this.SetValue(AgeProperty, value); }
+    }
 
-public static readonly DependencyProperty AspectRatioWidthProperty = DependencyProperty.Register(
-  "AspectRatioWidth", typeof(int), typeof(CampImage), new PropertyMetadata(16));
+    public static readonly DependencyProperty AgeProperty = DependencyProperty.Register(
+        "Age", typeof(int), typeof(Profile), new PropertyMetadata(0));
 ```
 
 ## 4. Opensource
