@@ -49,6 +49,7 @@ public class Profile : Control
 
     public static readonly DependencyProperty AgeProperty = DependencyProperty.Register(
         "Age", typeof(int), typeof(Profile), new PropertyMetadata(0));
+}
 ```
 
 ## 4. Opensource
