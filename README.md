@@ -51,5 +51,14 @@ public class Profile : Control
         "Age", typeof(int), typeof(Profile), new PropertyMetadata(0));
 }
 ```
-
+### 3.2. Extander Property
+```csharp
+class PasswordExtender
+{
+    public static readonly DependencyProperty PasswordProperty =
+        DependencyProperty.RegisterAttached("Password",
+        typeof(string), typeof(PasswordExtender),
+        new FrameworkPropertyMetadata(string.Empty, OnPasswordPropertyChanged));
+}
+```
 ## 4. Opensource
