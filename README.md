@@ -61,4 +61,15 @@ class PasswordExtender
         new FrameworkPropertyMetadata(string.Empty, OnPasswordPropertyChanged));
 }
 ```
+```csharp
+public static string GetPassword(DependencyObject dp)
+{
+    return (string)dp.GetValue(PasswordProperty);
+}
+
+public static void SetPassword(DependencyObject dp, string value)
+{
+    dp.SetValue(PasswordProperty, value);
+}
+```
 ## 4. Opensource
