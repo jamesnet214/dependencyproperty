@@ -72,4 +72,10 @@ public static void SetPassword(DependencyObject dp, string value)
     dp.SetValue(PasswordProperty, value);
 }
 ```
+```csharp
+private static void OnPasswordPropertyChanged(DependencyObject sender,
+    DependencyPropertyChangedEventArgs e)
+{
+}
+```
 ## 4. Opensource
