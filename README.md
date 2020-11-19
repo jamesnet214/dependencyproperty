@@ -79,3 +79,6 @@ private static void OnPasswordPropertyChanged(DependencyObject sender,
 }
 ```
 ## 4. Opensource
+
+## 99. References
+> Article Tutorial [here.](https://www.wpftutorial.net/DependencyProperties.html)
