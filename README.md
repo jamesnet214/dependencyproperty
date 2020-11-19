@@ -78,7 +78,21 @@ private static void OnPasswordPropertyChanged(DependencyObject sender,
 {
 }
 ```
+
+### 3.3. Value Callback Changed
+```csharp
+public static readonly DependencyProperty MyPropertyProperty =
+    DependencyProperty.Register("MyProperty", typeof(int), typeof(MyControl),
+        new PropertyMetadata(0, MyPropertyChangedHandler));
+
+private static void MyPropertyChangedHandler(DependencyObject sender, DependencyPropertyChangedEventArgs args)
+{
+    // Use args.OldValue and args.NewValue here as needed.
+    // sender is the object whose property changed.
+    // Some unboxing required.
+```
 ## 4. Opensource
 
 ## 99. References
-> Article Tutorial [here.](https://www.wpftutorial.net/DependencyProperties.html)
+> Article Tutorial 2 [here.](https://www.wpftutorial.net/DependencyProperties.html)
+> Article Tutorial 2 [here.](https://sodocumentation.net/wpf/topic/2914/dependency-properties)
