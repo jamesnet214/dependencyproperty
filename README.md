@@ -90,6 +90,7 @@ private static void MyPropertyChangedHandler(DependencyObject sender, Dependency
     // Use args.OldValue and args.NewValue here as needed.
     // sender is the object whose property changed.
     // Some unboxing required.
+}
 ```
 ## 4. Opensource
 
