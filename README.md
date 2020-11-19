@@ -81,15 +81,18 @@ private static void OnPasswordPropertyChanged(DependencyObject sender,
 
 ### 3.3. Value Callback Changed
 ```csharp
-public static readonly DependencyProperty MyPropertyProperty =
-    DependencyProperty.Register("MyProperty", typeof(int), typeof(MyControl),
-        new PropertyMetadata(0, MyPropertyChangedHandler));
-
-private static void MyPropertyChangedHandler(DependencyObject sender, DependencyPropertyChangedEventArgs args)
+public string Password
 {
-    // Use args.OldValue and args.NewValue here as needed.
-    // sender is the object whose property changed.
-    // Some unboxing required.
+    get { return (string)this.GetValue(PasswordProperty); }
+    set { this.SetValue(PasswordProperty, value); }
+}
+public static readonly DependencyProperty PasswordProperty =
+    DependencyProperty.Register("Password", typeof(string), typeof(VisualPassword),
+        new PropertyMetadata(string.Empty, PasswordPropertyChanged));
+
+private static void PasswordPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+{
+    
 }
 ```
 ## 4. Opensource
