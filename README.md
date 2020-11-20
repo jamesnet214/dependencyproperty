@@ -99,46 +99,46 @@ private static void PasswordPropertyChanged(DependencyObject d, DependencyProper
 ### 3.4. Binding Core Callback MVVM
 ```csharp
 public string Password
-        {
-            get { return (string)this.GetValue(PasswordProperty); }
-            set { this.SetValue(PasswordProperty, value); }
-        }
+{
+    get { return (string)this.GetValue(PasswordProperty); }
+    set { this.SetValue(PasswordProperty, value); }
+}
 
-        public static readonly DependencyProperty PasswordProperty =
-        DependencyProperty.Register(
-                "Password", 
-                typeof(string), 
-                typeof(VIsualPassword),
-                new FrameworkPropertyMetadata( 
-                        string.Empty, 
-                        FrameworkPropertyMetadataOptions.BindsTwoWayByDefault | FrameworkPropertyMetadataOptions.Journal,
-                        new PropertyChangedCallback(OnPasswordPropertyChanged),
-                        new CoerceValueCallback(CoercePassword),
-                        true, 
-                        UpdateSourceTrigger.LostFocus 
-                        ));
+public static readonly DependencyProperty PasswordProperty =
+DependencyProperty.Register(
+        "Password", 
+        typeof(string), 
+        typeof(VIsualPassword),
+        new FrameworkPropertyMetadata( 
+                string.Empty, 
+                FrameworkPropertyMetadataOptions.BindsTwoWayByDefault | FrameworkPropertyMetadataOptions.Journal,
+                new PropertyChangedCallback(OnPasswordPropertyChanged),
+                new CoerceValueCallback(CoercePassword),
+                true, 
+                UpdateSourceTrigger.LostFocus 
+                ));
 
 
-        private static void OnPasswordPropertyChanged(DependencyObject sender, DependencyPropertyChangedEventArgs args)
-        {
-            VIsualPassword p = sender as VIsualPassword;
+private static void OnPasswordPropertyChanged(DependencyObject sender, DependencyPropertyChangedEventArgs args)
+{
+    VIsualPassword p = sender as VIsualPassword;
 
-            if (!p._password.Password.Equals(args.NewValue?.ToString()))
-            {
-                p._password.PasswordChanged -= p._password_PasswordChanged;
-                p._password.Password = args.NewValue?.ToString();
-                p._password.PasswordChanged += p._password_PasswordChanged;
-            }
-        }
-        private static object CoercePassword(DependencyObject d, object value)
-        {
-            if (value == null)
-            {
-                return String.Empty;
-            }
+    if (!p._password.Password.Equals(args.NewValue?.ToString()))
+    {
+        p._password.PasswordChanged -= p._password_PasswordChanged;
+        p._password.Password = args.NewValue?.ToString();
+        p._password.PasswordChanged += p._password_PasswordChanged;
+    }
+}
+private static object CoercePassword(DependencyObject d, object value)
+{
+    if (value == null)
+    {
+        return String.Empty;
+    }
 
-            return value;
-        }
+    return value;
+}
 ```
 ## 4. Opensource
 
