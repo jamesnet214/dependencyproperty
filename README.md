@@ -37,7 +37,7 @@ namespace System.Windows
 ## 3. Example
 
 ### 3.1. Standard Type
-
+#### Int Type DependencyProperty
 ```csharp
 public class Profile : Control
 {
@@ -51,6 +51,22 @@ public class Profile : Control
         "Age", typeof(int), typeof(Profile), new PropertyMetadata(0));
 }
 ```
+
+#### Boolean Type DependencyProperty
+```csharp
+public class Profile : Control
+{
+    public bool IsUsed
+    {
+        get { return (int)this.GetValue(IsUsedProperty); }
+        set { this.SetValue(IsUsedProperty, value); }
+    }
+
+    public static readonly DependencyProperty IsUsedProperty = DependencyProperty.Register(
+        "IsUsed", typeof(bool), typeof(Profile), new PropertyMetadata(false));
+}
+```
+
 ### 3.2. Extander Property
 ```csharp
 class PasswordExtender
