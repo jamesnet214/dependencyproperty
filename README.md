@@ -58,7 +58,7 @@ public class Profile : Control
 {
     public bool IsUsed
     {
-        get { return (int)this.GetValue(IsUsedProperty); }
+        get { return (bool)this.GetValue(IsUsedProperty); }
         set { this.SetValue(IsUsedProperty, value); }
     }
 
