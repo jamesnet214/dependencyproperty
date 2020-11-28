@@ -67,6 +67,21 @@ public class Profile : Control
 }
 ```
 
+#### ICommand
+```
+public class ControlTreeView : TreeView
+{
+    public ICommand Command
+    {
+        get { return (ICommand)this.GetValue(CommandProperty); }
+        set { this.SetValue(CommandProperty, value); }
+    }
+
+    public static readonly DependencyProperty CommandProperty = DependencyProperty.Register(
+        "Command", typeof(ICommand), typeof(ControlTreeView));
+}
+```
+
 ### 3.2. Extander Property
 ```csharp
 class PasswordExtender
