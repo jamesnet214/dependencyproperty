@@ -68,7 +68,7 @@ public class Profile : Control
 ```
 
 #### ICommand
-```
+```csharp
 public class ControlTreeView : TreeView
 {
     public ICommand Command
