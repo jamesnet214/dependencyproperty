@@ -67,6 +67,21 @@ public class Profile : Control
 }
 ```
 
+#### String Type DependencyProperty
+```csharp
+public class Profile : Control
+{
+    public string Header
+    {
+        get { return (string)this.GetValue(HeaderProperty); }
+        set { this.SetValue(HeaderProperty, value); }
+    }
+
+    public static readonly DependencyProperty HeaderProperty = DependencyProperty.Register(
+        "Header", typeof(string), typeof(Profile), new PropertyMetadata(""));
+}
+```
+
 #### ICommand
 ```csharp
 public class ControlTreeView : TreeView
