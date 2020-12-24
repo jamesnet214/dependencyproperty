@@ -82,6 +82,52 @@ public class Profile : Control
 }
 ```
 
+#### Geometry Type DependencyProperty
+```csharp
+public class PathIcon : Control
+{
+    public Geometry Data
+    {
+        get { return (Geometry)this.GetValue(DataProperty); }
+        set { this.SetValue(DataProperty, value); }
+    }
+
+    public static readonly DependencyProperty DataProperty = DependencyProperty.Register(
+        "Data", typeof(Geometry), typeof(PathIcon), new PropertyMetadata(null));
+}
+```
+
+#### Brush Type DependencyProperty
+```csharp
+public class GeometryIcon : Control
+{
+    public Brush Fill
+    {
+        get { return (Brush)this.GetValue(FillProperty); }
+        set { this.SetValue(FillProperty, value); }
+    }
+
+    public static readonly DependencyProperty FillProperty = DependencyProperty.Register(
+        "Fill", typeof(Brush), typeof(GeometryIcon), new PropertyMetadata(null));
+}
+```
+
+
+#### Double Type DependencyProperty
+```csharp
+public class GeometryIcon : Control
+{
+    public double IconWidth
+    {
+        get { return (double)this.GetValue(IconWidthProperty); }
+        set { this.SetValue(IconWidthProperty, value); }
+    }
+
+    public static readonly DependencyProperty IconWidthProperty = DependencyProperty.Register(
+        "IconWidth", typeof(double), typeof(GeometryIcon), new PropertyMetadata(0));
+}
+```
+
 #### ICommand
 ```csharp
 public class ControlTreeView : TreeView
