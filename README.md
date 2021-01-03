@@ -82,6 +82,22 @@ public class Profile : Control
 }
 ```
 
+#### Object Type DependencyProperty
+```csharp
+public class CustomControl : Control
+{
+    public object Content
+    {
+        get { return (object)this.GetValue(ContentProperty); }
+        set { this.SetValue(ContentProperty, value); }
+    }
+
+    public static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
+        "Content", typeof(object), typeof(Profile), new PropertyMetadata(""));
+}
+```
+It is actually the same as the Content Property included in the ContentControl class. If you inherit ContentControl and create a control that defines ContentPresenter, use Object-type DependencyProperty.
+
 #### Geometry Type DependencyProperty
 ```csharp
 public class PathIcon : Control
