@@ -159,7 +159,7 @@ public class ControlTreeView : TreeView
 }
 ```
 
-### 3.2. Extander Property
+### 3.2. Extender Property
 ```csharp
 class PasswordExtender
 {
@@ -216,7 +216,7 @@ public static readonly DependencyProperty PasswordProperty =
 DependencyProperty.Register(
         "Password", 
         typeof(string), 
-        typeof(VIsualPassword),
+        typeof(VisualPassword),
         new FrameworkPropertyMetadata( 
                 string.Empty, 
                 FrameworkPropertyMetadataOptions.BindsTwoWayByDefault | FrameworkPropertyMetadataOptions.Journal,
@@ -229,7 +229,7 @@ DependencyProperty.Register(
 
 private static void OnPasswordPropertyChanged(DependencyObject sender, DependencyPropertyChangedEventArgs args)
 {
-    VIsualPassword p = sender as VIsualPassword;
+    VisualPassword p = sender as VisualPassword;
 
     if (!p._password.Password.Equals(args.NewValue?.ToString()))
     {
