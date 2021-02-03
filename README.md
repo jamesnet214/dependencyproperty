@@ -2,8 +2,8 @@
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
-## Ncoresoft Repository
-> Ncoresoft Git. [here.](https://github.com/ncoresoftsource/ncoresoftgit)
+## DevNcore Repository
+> DevNcore Git. [here.](https://github.com/ncoresoftsource/ncoresoftgit)
 
 ## 2. DependencyProperty
 1. Class
