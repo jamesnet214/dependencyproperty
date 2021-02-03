@@ -3,7 +3,7 @@
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
 ## DevNcore Repository
-> DevNcore Git. [here.](https://github.com/ncoresoftsource/ncoresoftgit)
+> DevNcore Git. [here.](https://github.com/devncore/devncore)
 
 ## 2. DependencyProperty
 1. Class
