@@ -146,16 +146,14 @@ public class GeometryIcon : Control
 
 #### ICommand
 ```csharp
-public class ControlTreeView : TreeView
+public static readonly DependencyProperty CommandProperty = DependencyProperty.Register(
+    "Command", typeof(ICommand), typeof(ControlTreeView));
+```
+```csharp
+public ICommand Command
 {
-    public ICommand Command
-    {
-        get { return (ICommand)this.GetValue(CommandProperty); }
-        set { this.SetValue(CommandProperty, value); }
-    }
-
-    public static readonly DependencyProperty CommandProperty = DependencyProperty.Register(
-        "Command", typeof(ICommand), typeof(ControlTreeView));
+    get { return (ICommand)this.GetValue(CommandProperty); }
+    set { this.SetValue(CommandProperty, value); }
 }
 ```
 
