@@ -17,7 +17,7 @@ Official Website [Here.](https://devncore.org)
 
 여러분이 MVVM 패턴을 더욱 더 적극적으로 활용하기 위해서는 `DependencyProperty`가 필연적으로 필요합니다.
 ## 1. DependencyProperty
-#### Class Version 
+#### 1.1. Class Version 
 The first target version of DependencyProperty is based on .NET Frmaeowrk `3.0`
 | Target Name    | Version                                                                                  |
 |:---------------|:-----------------------------------------------------------------------------------------|
@@ -28,12 +28,12 @@ The first target version of DependencyProperty is based on .NET Frmaeowrk `3.0`
 #### _So .NET Framework 2.0 doesn't allow us to use DependencyProperty?_   
 > That's right. WPF starts at 3.0. :smile:
 
-#### Class Information
+#### 1.2. Class Information
 | Assembly             | Namespace                   | Class Access        | Base Class      |
 |:---------------------|:----------------------------|:--------------------|:----------------|
 | WindowsBase.dll      | System.Windows              | `sealed`            | `Object`        |
 
-#### Class Structure
+#### 1.3. Class Structure
 DependencyPropery 클래스의 Access 권한은 `sealed`이므로 직접 상속받을 수 없습니다.
 
 ```csharp
