@@ -266,7 +266,7 @@ private static object CoercePassword(DependencyObject d, object value)
 ③ Virtual   
 ④ struct   
 
-2. DependencyProperty의 알맞은 Namespace를 고르시오.   
+2. DependencyProperty를 사용하기 위해 필요한 Namespace를 고르시오.   
 ① using System;   
 ② using System.Windows;   
 ③ using System.Windows.Threading;   
