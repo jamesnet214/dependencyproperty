@@ -28,9 +28,6 @@ The first target version of DependencyProperty is based on .NET Frmaeowrk `3.0`
 #### _So .NET Framework 2.0 doesn't allow us to use DependencyProperty?_   
 > That's right. WPF starts at 3.0. :smile:
 
-#### Microsoft Docs
-> DependencyProperty Class [Here.](https://docs.microsoft.com/ko-kr/dotnet/api/system.windows.dependencyproperty?view=netframework-4.8)
-
 ### 1.2. Assembly
 WindowsBase.dll
 
@@ -264,6 +261,8 @@ private static object CoercePassword(DependencyObject d, object value)
 ## 4. Opensource
 
 ## 99. References
-### 99.1 Community Articles
-- wpftutorial [here.](https://www.wpftutorial.net/DependencyProperties.html)
-- sodocumentation [here.](https://sodocumentation.net/wpf/topic/2914/dependency-properties)
+### 99.1 Community Docs
+> wpftutorial [here.](https://www.wpftutorial.net/DependencyProperties.html)
+> sodocumentation [here.](https://sodocumentation.net/wpf/topic/2914/dependency-properties)
+> DependencyProperty Class [Here.](https://docs.microsoft.com/ko-kr/dotnet/api/system.windows.dependencyproperty?view=netframework-4.8)
+
