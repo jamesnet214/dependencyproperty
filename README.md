@@ -59,9 +59,10 @@ DependencyProperty 선언 구조를 응용하여 필요로 하는 속성 `Type`�
 - [String](#String-Type)
 - [Object](#Object-Type)
 - [Geometry](#Geometry-Type)
-- [String](#String-Type)
-- [String](#String-Type)
-#### Int type
+- [Brush](#Brush-Type)
+- [Double](#Double-Type)
+- [ICommand](#ICommand-Type)
+### Int type
 Register `Int` Type Dependency Property
 ```csharp
 public static readonly DependencyProperty AgeProperty = DependencyProperty.Register(
@@ -75,7 +76,7 @@ public int Age
 }
 ```
 
-#### Boolean Type
+### Boolean Type
 ```csharp
 public static readonly DependencyProperty IsUsedProperty = DependencyProperty.Register(
     "IsUsed", typeof(bool), typeof(<class>), new PropertyMetadata(false));
@@ -88,7 +89,7 @@ public bool IsUsed
 }
 ```
 
-#### String Type
+### String Type
 ```csharp
 public static readonly DependencyProperty PlaceHolderProperty = DependencyProperty.Register(
     "Header", typeof(string), typeof(<class>), new PropertyMetadata(""));
@@ -101,7 +102,7 @@ public string PlaceHolder
 }
 ```
 
-#### Object Type
+### Object Type
 ```csharp
 public static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
     "Content", typeof(object), typeof(<class>), new PropertyMetadata(""));
@@ -115,7 +116,7 @@ public object Content
 ```
 It is actually the same as the Content Property included in the ContentControl class. If you inherit ContentControl and create a control that defines ContentPresenter, use Object-type DependencyProperty.
 
-#### Geometry Type
+### Geometry Type
 ```csharp
 public static readonly DependencyProperty DataProperty = DependencyProperty.Register(
     "Data", typeof(Geometry), typeof(<침ㄴㄴ>), new PropertyMetadata(null));
@@ -128,7 +129,7 @@ public Geometry Data
 }
 ```
 
-#### Brush Type
+### Brush Type
 ```csharp
 public static readonly DependencyProperty FillProperty = DependencyProperty.Register(
     "Fill", typeof(Brush), typeof(<class>), new PropertyMetadata(null));
