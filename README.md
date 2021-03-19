@@ -33,7 +33,7 @@ The first target version of DependencyProperty is based on .NET Frmaeowrk `3.0`
 |:---------------------|:----------------------------|:--------------------|
 | WindowsBase.dll      | System.Windows              | `sealed`            |
 
-### 1.3. Class Structure
+#### Structure
 ```csharp
 namespace System.Windows
 {
