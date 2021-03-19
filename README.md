@@ -43,10 +43,7 @@ namespace System.Windows
     }   
 }
 ```
-
 ### 2.2. Naming Rules
-
-
 
 ### 2.3. DependencyProperty.Register
 
