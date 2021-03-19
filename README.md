@@ -4,6 +4,7 @@
 
 ## _What is the DependencyProperty?_
 **DependencyProperty**는 DependencyObject에서 파생되는 클래스의 속성이며, 단순히 백업 필드를 사용하여 값을 저장하는 것이 아니라 DependencyObject에서 일부 도우미 메서드를 사용한다는 점에서 특별합니다.   
+
 가장 좋은 점은 데이터 바인딩을위한 모든 배관이 내장되어 있다는 것입니다. 무언가를 바인딩하면 변경 될 때 알림을 보냅니다.
 ## 2. DependencyProperty
 1. Class
