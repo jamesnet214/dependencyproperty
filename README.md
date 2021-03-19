@@ -47,7 +47,8 @@ namespace System.Windows
 ```csharp
 public static readonly DependencyProperty AgeProperty = DependencyProperty.Register(
     "Age", typeof(int), typeof(<class>), new PropertyMetadata(0));
-
+```
+```csharp
 public int Age
 {
     get { return (int)this.GetValue(AgeProperty); }
@@ -59,7 +60,8 @@ public int Age
 ```csharp
 public static readonly DependencyProperty IsUsedProperty = DependencyProperty.Register(
     "IsUsed", typeof(bool), typeof(<class>), new PropertyMetadata(false));
-    
+```
+```csharp
 public bool IsUsed 
 { 
     get { return (bool)this.GetValue(IsUsedProperty); }
@@ -71,7 +73,8 @@ public bool IsUsed
 ```csharp
 public static readonly DependencyProperty PlaceHolderProperty = DependencyProperty.Register(
     "Header", typeof(string), typeof(<class>), new PropertyMetadata(""));
-    
+```
+```csharp
 public string PlaceHolder
 {
     get { return (string)this.GetValue(PlaceHolderProperty); }
@@ -83,7 +86,8 @@ public string PlaceHolder
 ```csharp
 public static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
     "Content", typeof(object), typeof(<class>), new PropertyMetadata(""));
-    
+```
+```csharp
 public object Content
 {
     get { return (object)this.GetValue(ContentProperty); }
@@ -96,7 +100,8 @@ It is actually the same as the Content Property included in the ContentControl c
 ```csharp
 public static readonly DependencyProperty DataProperty = DependencyProperty.Register(
     "Data", typeof(Geometry), typeof(<침ㄴㄴ>), new PropertyMetadata(null));
-    
+```
+```csharp
 public Geometry Data
 {
     get { return (Geometry)this.GetValue(DataProperty); }
@@ -120,7 +125,8 @@ public Brush Fill
 ```csharp
 public static readonly DependencyProperty IconWidthProperty = DependencyProperty.Register(
     "IconWidth", typeof(double), typeof(<class>), new PropertyMetadata(0));
-    
+```
+```csharp
 public double IconWidth
 {
     get { return (double)this.GetValue(IconWidthProperty); }
