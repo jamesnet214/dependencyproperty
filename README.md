@@ -261,16 +261,22 @@ private static object CoercePassword(DependencyObject d, object value)
 ```
 ## 4. Quiz Time
 1. 다음 중 DependencyProperty의 클래스 접근제한자로 알맞은 것은?   
-① Abstruct
-② Sealed
-③ Virtual
-④ struct
+① Abstruct   
+② Sealed   
+③ Virtual   
+④ struct   
 
 2. DependencyProperty의 알맞은 Namespace를 고르시오.   
-① using System;
-② using System.Windows;
-③ using System.Windows.Threading;
-④ using System.ComponentModel;
+① using System;   
+② using System.Windows;   
+③ using System.Windows.Threading;   
+④ using System.ComponentModel;   
+
+3. DependencyProperty는 닷넷프레임워크의 어느 Assembly에서 제공하는 클래스인가?   
+① System.dll;   
+② System.Windows.dll;   
+③ WindowsBase.dll;   
+④ PresentationFramework.dll;  
 
 ## 99. References
 ### 99.1 Community Docs
