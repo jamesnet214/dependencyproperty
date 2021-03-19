@@ -1,7 +1,7 @@
 # DependencyProperty
 ### Itroduction
 **This document** provides a study of the Dependency Property of the WPF.   
-DevNcore [devncore.org](https://devncore.org)
+DevNcore [devncore.org](https://devncore.org)   
 GitHub [DevNcore.](https://github.com/devncore)
 ### License Policy
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
