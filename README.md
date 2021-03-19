@@ -94,60 +94,50 @@ It is actually the same as the Content Property included in the ContentControl c
 
 #### Geometry Type
 ```csharp
-public class PathIcon : Control
+public static readonly DependencyProperty DataProperty = DependencyProperty.Register(
+    "Data", typeof(Geometry), typeof(<침ㄴㄴ>), new PropertyMetadata(null));
+    
+public Geometry Data
 {
-    public Geometry Data
-    {
-        get { return (Geometry)this.GetValue(DataProperty); }
-        set { this.SetValue(DataProperty, value); }
-    }
-
-    public static readonly DependencyProperty DataProperty = DependencyProperty.Register(
-        "Data", typeof(Geometry), typeof(PathIcon), new PropertyMetadata(null));
+    get { return (Geometry)this.GetValue(DataProperty); }
+    set { this.SetValue(DataProperty, value); }
 }
 ```
 
 #### Brush Type
 ```csharp
-public class GeometryIcon : Control
+public static readonly DependencyProperty FillProperty = DependencyProperty.Register(
+    "Fill", typeof(Brush), typeof(<class>), new PropertyMetadata(null));
+public Brush Fill
 {
-    public Brush Fill
-    {
-        get { return (Brush)this.GetValue(FillProperty); }
-        set { this.SetValue(FillProperty, value); }
-    }
-
-    public static readonly DependencyProperty FillProperty = DependencyProperty.Register(
-        "Fill", typeof(Brush), typeof(GeometryIcon), new PropertyMetadata(null));
+    get { return (Brush)this.GetValue(FillProperty); }
+    set { this.SetValue(FillProperty, value); }
 }
 ```
 
 
-#### Double Type DependencyProperty
+#### Double Type
 ```csharp
-public class GeometryIcon : Control
+public static readonly DependencyProperty IconWidthProperty = DependencyProperty.Register(
+    "IconWidth", typeof(double), typeof(<class>), new PropertyMetadata(0));
+    
+public double IconWidth
 {
-    public double IconWidth
-    {
-        get { return (double)this.GetValue(IconWidthProperty); }
-        set { this.SetValue(IconWidthProperty, value); }
-    }
-
-    public static readonly DependencyProperty IconWidthProperty = DependencyProperty.Register(
-        "IconWidth", typeof(double), typeof(GeometryIcon), new PropertyMetadata(0));
+    get { return (double)this.GetValue(IconWidthProperty); }
+    set { this.SetValue(IconWidthProperty, value); }
 }
 ```
 
 #### ICommand
 ```csharp
-public static readonly DependencyProperty CommandProperty = DependencyProperty.Register(
-    "Command", typeof(ICommand), typeof(ControlTreeView));
+public static readonly DependencyProperty SelectionCommandProperty = DependencyProperty.Register(
+    "SelectionCommand", typeof(ICommand), typeof(<class>));
 ```
 ```csharp
-public ICommand Command
+public ICommand SelectionCommand
 {
-    get { return (ICommand)this.GetValue(CommandProperty); }
-    set { this.SetValue(CommandProperty, value); }
+    get { return (ICommand)this.GetValue(SelectionCommandProperty); }
+    set { this.SetValue(SelectionCommandProperty, value); }
 }
 ```
 
