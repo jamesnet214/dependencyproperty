@@ -50,8 +50,8 @@ public static readonly DependencyProperty AgeProperty = DependencyProperty.Regis
 
 public int Age
 {
-    get { return (int)this.GetValue(AgeProperty); }
-    set { this.SetValue(AgeProperty, value); }
+    get => (int)this.GetValue(AgeProperty); 
+    set => this.SetValue(AgeProperty, value);
 }
 ```
 
@@ -59,6 +59,7 @@ public int Age
 ```csharp
 public static readonly DependencyProperty IsUsedProperty = DependencyProperty.Register(
     "IsUsed", typeof(bool), typeof(<class>), new PropertyMetadata(false));
+    
 public bool IsUsed 
 { 
     get => (bool)this.GetValue(IsUsedProperty); 
