@@ -42,19 +42,16 @@ namespace System.Windows
 
 ## 3. Example
 
-### 3.1. Standard Type
-#### Int Type DependencyProperty
+### 3.1. Standard
+#### Type Int
 ```csharp
-public class Profile : Control
-{
-    public int Age
-    {
-        get { return (int)this.GetValue(AgeProperty); }
-        set { this.SetValue(AgeProperty, value); }
-    }
+public static readonly DependencyProperty AgeProperty = DependencyProperty.Register(
+    "Age", typeof(int), typeof(Profile), new PropertyMetadata(0));
 
-    public static readonly DependencyProperty AgeProperty = DependencyProperty.Register(
-        "Age", typeof(int), typeof(Profile), new PropertyMetadata(0));
+public int Age
+{
+    get { return (int)this.GetValue(AgeProperty); }
+    set { this.SetValue(AgeProperty, value); }
 }
 ```
 
