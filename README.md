@@ -3,8 +3,7 @@
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 #### Itroduction
-Microsoft .NET Framework, Core   
-WPF   
+Microsoft .NET Framework, .Core, WPF   
 
 ## _What is the DependencyProperty?_
 **DependencyProperty**는 DependencyObject에서 파생되는 클래스의 속성이며, 단순히 백업 필드를 사용하여 값을 저장하는 것이 아니라 DependencyObject에서 일부 도우미 메서드를 사용한다는 점에서 특별합니다.   
