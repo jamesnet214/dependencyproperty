@@ -50,7 +50,7 @@ namespace System.Windows
 
 ### 2.4. PropertyMetadata
 
-## 3. Example
+## 3. Example of Dependency-Properties By Type
 우리는 정의된 DependencyProperty 구조를 이해하고 이를 응용하여 다양한 `type`을 만들 수 있습니다.
 ### 3.1. Standard
 #### Int type
