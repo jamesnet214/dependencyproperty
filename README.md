@@ -14,7 +14,7 @@ Official Website [Here.](https://devncore.org)
 가장 좋은 점은 데이터 바인딩을위한 모든 배관이 내장되어 있다는 것입니다. 무언가를 바인딩하면 변경 될 때 알림을 보냅니다.
 
 여러분이 MVVM 패턴을 더욱 더 적극적으로 활용하기 위해서는 `DependencyProperty`가 필연적으로 필요합니다.
-## 1. OrverView
+## 1. Orverview
 이 문서는 DependencyProperty 속성에 관련된 연구 기술 논문입니다. WPF는 이 의존 프로퍼티를 통해 강력한 Binding, 프로퍼티 상속 구조를 지니고 있기 때문에 기술의 범위와 깊이에 있어 다소 높은 난이도를 필요로 합니다.
 #### 1.1. Class Version 
 The first target version of DependencyProperty is based on .NET Frmaeowrk `3.0`
@@ -51,7 +51,7 @@ namespace System.Windows
 ### 2.4. PropertyMetadata
 
 ## 3. Example
-
+우리는 정의된 DependencyProperty 구조를 이해하고 이를 응용하여 다양한 `type`을 만들 수 있습니다.
 ### 3.1. Standard
 #### Int type
 Register `Int` Type Dependency Property
