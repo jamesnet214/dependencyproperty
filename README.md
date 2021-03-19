@@ -50,8 +50,8 @@ public static readonly DependencyProperty AgeProperty = DependencyProperty.Regis
 
 public int Age
 {
-    get => (int)this.GetValue(AgeProperty); 
-    set => this.SetValue(AgeProperty, value);
+    get { return (int)this.GetValue(AgeProperty); }
+    set { this.SetValue(AgeProperty, value); }
 }
 ```
 
@@ -62,27 +62,24 @@ public static readonly DependencyProperty IsUsedProperty = DependencyProperty.Re
     
 public bool IsUsed 
 { 
-    get => (bool)this.GetValue(IsUsedProperty); 
-    set => this.SetValue(IsUsedProperty, value); 
+    get { return (bool)this.GetValue(IsUsedProperty); }
+    set { this.SetValue(IsUsedProperty, value); }
 }
 ```
 
-#### String Type DependencyProperty
+#### String Type
 ```csharp
-public class Profile : Control
+public static readonly DependencyProperty PlaceHolderProperty = DependencyProperty.Register(
+    "Header", typeof(string), typeof(<class>), new PropertyMetadata(""));
+    
+public string PlaceHolder
 {
-    public string Header
-    {
-        get { return (string)this.GetValue(HeaderProperty); }
-        set { this.SetValue(HeaderProperty, value); }
-    }
-
-    public static readonly DependencyProperty HeaderProperty = DependencyProperty.Register(
-        "Header", typeof(string), typeof(Profile), new PropertyMetadata(""));
+    get { return (string)this.GetValue(PlaceHolderProperty); }
+    set { this.SetValue(PlaceHolderProperty, value); }
 }
 ```
 
-#### Object Type DependencyProperty
+#### Object Type
 ```csharp
 public class CustomControl : Control
 {
@@ -98,7 +95,7 @@ public class CustomControl : Control
 ```
 It is actually the same as the Content Property included in the ContentControl class. If you inherit ContentControl and create a control that defines ContentPresenter, use Object-type DependencyProperty.
 
-#### Geometry Type DependencyProperty
+#### Geometry Type
 ```csharp
 public class PathIcon : Control
 {
@@ -113,7 +110,7 @@ public class PathIcon : Control
 }
 ```
 
-#### Brush Type DependencyProperty
+#### Brush Type
 ```csharp
 public class GeometryIcon : Control
 {
