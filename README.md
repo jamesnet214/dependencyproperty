@@ -259,7 +259,12 @@ private static object CoercePassword(DependencyObject d, object value)
     return value;
 }
 ```
-## 4. Opensource
+## 4. Quiz Time
+1. 다음 중 DependencyProperty의 클래스 접근제한자로 알맞은 것은?
+① Abstruct
+② Sealed
+③ Virtual
+④ struct
 
 ## 99. References
 ### 99.1 Community Docs
