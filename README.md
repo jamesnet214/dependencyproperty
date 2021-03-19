@@ -29,9 +29,9 @@ The first target version of DependencyProperty is based on .NET Frmaeowrk `3.0`
 > That's right. WPF starts at 3.0. :smile:
 
 #### Class Information
-| Assembly             | Namespace                   | Class Access        |
-|:---------------------|:----------------------------|:--------------------|
-| WindowsBase.dll      | System.Windows              | `sealed`            |
+| Assembly             | Namespace                   | Class Access        | Base Class      |
+|:---------------------|:----------------------------|:--------------------|:----------------|
+| WindowsBase.dll      | System.Windows              | `sealed`            | `Object`        |
 
 #### Class Structure
 ```csharp
