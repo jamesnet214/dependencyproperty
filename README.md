@@ -33,16 +33,7 @@ The first target version of DependencyProperty is based on .NET Frmaeowrk `3.0`
 |:---------------------|:----------------------------|:---------------|
 | WindowsBase.dll      | System.Windows              | `sealed`       |
 
-1. Class
-2. Naming Rules
-3. DependencyProperty.Register
-4. PropertyMetadata
-
-### 2.1. Class Structure
-namespace: `System.Windows`   
-assembly: `WindowsBase.dll`   
-class access: `sealed`   
-first version: `.net 3.0`
+### 1.3. Class Structure
 ```csharp
 namespace System.Windows
 {
