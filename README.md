@@ -251,3 +251,10 @@ private static object CoercePassword(DependencyObject d, object value)
 ## 99. References
 > Article Tutorial 2 [here.](https://www.wpftutorial.net/DependencyProperties.html)
 > Article Tutorial 2 [here.](https://sodocumentation.net/wpf/topic/2914/dependency-properties)
+> 
+
+
+
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
+[![Github all releases](https://img.shields.io/github/downloads/Naereen/StrapDown.js/total.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
