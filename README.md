@@ -54,9 +54,13 @@ namespace System.Windows
 DependencyProperty 선언 구조를 응용하여 필요로 하는 속성 `Type`을 만들 수 있습니다.
 #### 2.1. Example of dependency-properties by type
 필요한 속성을 매번 만들 수도 있겠지만 이 문서에서는 가능한 모든 타입의 속성을 열거하고 기본 선언 구조를 제공합니다.
-- [Int Type](#Int-type)
-- [Boolean Type](#Boolean-Type)
-- [String Type](#String-Type)
+- [Int](#Int-type)
+- [Boolean](#Boolean-Type)
+- [String](#String-Type)
+- [Object](#Object-Type)
+- [Geometry](#Geometry-Type)
+- [String](#String-Type)
+- [String](#String-Type)
 #### Int type
 Register `Int` Type Dependency Property
 ```csharp
