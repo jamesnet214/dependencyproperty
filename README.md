@@ -51,7 +51,7 @@ namespace System.Windows
 ### 2.4. PropertyMetadata
 
 ## 2. Declaration
-우리는 정의된 DependencyProperty 구조를 이해하고 이를 응용하여 다양한 `type`을 만들 수 있습니다.
+DependencyProperty 선언 구조를 응용하여 필요로 하는 속성 `Type`을 만들 수 있습니다.
 #### 2.1. Example of dependency-properties by type
 
 #### Int type
