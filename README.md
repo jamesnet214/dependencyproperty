@@ -33,8 +33,9 @@ The first target version of DependencyProperty is based on .NET Frmaeowrk `3.0`
 |:---------------------|:----------------------------|:--------------------|:----------------|
 | WindowsBase.dll      | System.Windows              | `sealed`            | `Object`        |
 
-_DependencyPropery 클래스의 Access 권한은 `sealed`이므로 직접 상속받을 수 없습니다._
 #### Class Structure
+DependencyPropery 클래스의 Access 권한은 `sealed`이므로 직접 상속받을 수 없습니다.
+
 ```csharp
 namespace System.Windows
 {
