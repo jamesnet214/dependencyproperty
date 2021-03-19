@@ -28,6 +28,9 @@ The first target version of DependencyProperty is based on .NET Frmaeowrk `3.0`
 ##### _So .NET Framework 2.0 doesn't allow us to use DependencyProperty?_   
 -> That's right. WPF starts at 3.0. :smile:
 
+##### Microsoft Docs
+DependencyProperty Class [Here.](https://docs.microsoft.com/ko-kr/dotnet/api/system.windows.dependencyproperty?view=netframework-4.8)
+
 ### 1.2. Assembly
 WindowsBase.dll
 
