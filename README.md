@@ -16,7 +16,11 @@ Official Website [Here.](https://devncore.org)
 가장 좋은 점은 데이터 바인딩을위한 모든 배관이 내장되어 있다는 것입니다. 무언가를 바인딩하면 변경 될 때 알림을 보냅니다.
 
 여러분이 MVVM 패턴을 더욱 더 적극적으로 활용하기 위해서는 `DependencyProperty`가 필연적으로 필요합니다.
-## 2. DependencyProperty
+## 1. DependencyProperty
+
+### Assembly
+WindowsBase.dll
+
 1. Class
 2. Naming Rules
 3. DependencyProperty.Register
