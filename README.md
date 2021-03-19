@@ -1,6 +1,7 @@
 # DependencyProperty
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
+[![Github all releases](https://img.shields.io/github/downloads/Naereen/StrapDown.js/total.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
 
 ## DevNcore Repository
 > DevNcore Git. [here.](https://github.com/devncore/devncore)
@@ -252,9 +253,3 @@ private static object CoercePassword(DependencyObject d, object value)
 ### 99.1 Community Articles
 - wpftutorial [here.](https://www.wpftutorial.net/DependencyProperties.html)
 - sodocumentation [here.](https://sodocumentation.net/wpf/topic/2914/dependency-properties)
-
-
-
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
-[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
-[![Github all releases](https://img.shields.io/github/downloads/Naereen/StrapDown.js/total.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
