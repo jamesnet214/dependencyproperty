@@ -1,6 +1,4 @@
 # DependencyProperty
-### Itroduction
-**This document** provides a study of the Dependency Property of the WPF.   
 ### Our
 Contributors [Here.](https://devncore.org/aboutus/contributors)   
 ### DevNcore
@@ -17,6 +15,7 @@ Official Website [Here.](https://devncore.org)
 
 여러분이 MVVM 패턴을 더욱 더 적극적으로 활용하기 위해서는 `DependencyProperty`가 필연적으로 필요합니다.
 ## 1. OrverView
+**This document** provides a study of the Dependency Property of the WPF. 
 #### 1.1. Class Version 
 The first target version of DependencyProperty is based on .NET Frmaeowrk `3.0`
 | Target Name    | Version                                                                                  |
