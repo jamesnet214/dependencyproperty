@@ -43,10 +43,10 @@ namespace System.Windows
 ## 3. Example
 
 ### 3.1. Standard
-#### Type Int
+#### Int type
 ```csharp
 public static readonly DependencyProperty AgeProperty = DependencyProperty.Register(
-    "Age", typeof(int), typeof(Profile), new PropertyMetadata(0));
+    "Age", typeof(int), typeof(<class>), new PropertyMetadata(0));
 
 public int Age
 {
@@ -55,18 +55,14 @@ public int Age
 }
 ```
 
-#### Boolean Type DependencyProperty
+#### Boolean Type
 ```csharp
-public class Profile : Control
-{
-    public bool IsUsed
-    {
-        get { return (bool)this.GetValue(IsUsedProperty); }
-        set { this.SetValue(IsUsedProperty, value); }
-    }
-
-    public static readonly DependencyProperty IsUsedProperty = DependencyProperty.Register(
-        "IsUsed", typeof(bool), typeof(Profile), new PropertyMetadata(false));
+public static readonly DependencyProperty IsUsedProperty = DependencyProperty.Register(
+    "IsUsed", typeof(bool), typeof(<class>), new PropertyMetadata(false));
+public bool IsUsed 
+{ 
+    get => (bool)this.GetValue(IsUsedProperty); 
+    set => this.SetValue(IsUsedProperty, value); 
 }
 ```
 
