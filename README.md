@@ -81,16 +81,13 @@ public string PlaceHolder
 
 #### Object Type
 ```csharp
-public class CustomControl : Control
+public static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
+    "Content", typeof(object), typeof(<class>), new PropertyMetadata(""));
+    
+public object Content
 {
-    public object Content
-    {
-        get { return (object)this.GetValue(ContentProperty); }
-        set { this.SetValue(ContentProperty, value); }
-    }
-
-    public static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
-        "Content", typeof(object), typeof(Profile), new PropertyMetadata(""));
+    get { return (object)this.GetValue(ContentProperty); }
+    set { this.SetValue(ContentProperty, value); }
 }
 ```
 It is actually the same as the Content Property included in the ContentControl class. If you inherit ContentControl and create a control that defines ContentPresenter, use Object-type DependencyProperty.
