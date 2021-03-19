@@ -1,4 +1,6 @@
 # DependencyProperty
+### Itroduction
+**This document** provides a study of the Dependency Property of the WPF.   
 ### Our
 Contributors [Here.](https://devncore.org/aboutus/contributors)   
 ### DevNcore
