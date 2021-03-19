@@ -16,7 +16,7 @@ Official Website [Here.](https://devncore.org)
 가장 좋은 점은 데이터 바인딩을위한 모든 배관이 내장되어 있다는 것입니다. 무언가를 바인딩하면 변경 될 때 알림을 보냅니다.
 
 여러분이 MVVM 패턴을 더욱 더 적극적으로 활용하기 위해서는 `DependencyProperty`가 필연적으로 필요합니다.
-## 1. DependencyProperty
+## 1. OrverView
 #### 1.1. Class Version 
 The first target version of DependencyProperty is based on .NET Frmaeowrk `3.0`
 | Target Name    | Version                                                                                  |
