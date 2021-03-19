@@ -54,19 +54,19 @@ namespace System.Windows
 우리는 정의된 DependencyProperty 구조를 이해하고 이를 응용하여 다양한 `type`을 만들 수 있습니다.
 #### 2.1. Example of dependency-properties by type
 
-  #### Int type
-  Register `Int` Type Dependency Property
-  ```csharp
-  public static readonly DependencyProperty AgeProperty = DependencyProperty.Register(
-      "Age", typeof(int), typeof(<class>), new PropertyMetadata(0));
-  ```
-  ```csharp
-  public int Age
-  {
-      get { return (int)this.GetValue(AgeProperty); }
-      set { this.SetValue(AgeProperty, value); }
-  }
-  ```
+#### Int type
+Register `Int` Type Dependency Property
+```csharp
+public static readonly DependencyProperty AgeProperty = DependencyProperty.Register(
+    "Age", typeof(int), typeof(<class>), new PropertyMetadata(0));
+```
+```csharp
+public int Age
+{
+    get { return (int)this.GetValue(AgeProperty); }
+    set { this.SetValue(AgeProperty, value); }
+}
+```
 
 #### Boolean Type
 ```csharp
