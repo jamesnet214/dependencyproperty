@@ -249,6 +249,7 @@ private static object CoercePassword(DependencyObject d, object value)
 ## 4. Opensource
 
 ## 99. References
+### 99.1 Community Articles
 - wpftutorial [here.](https://www.wpftutorial.net/DependencyProperties.html)
 - sodocumentation [here.](https://sodocumentation.net/wpf/topic/2914/dependency-properties)
 
