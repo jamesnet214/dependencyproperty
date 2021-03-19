@@ -113,6 +113,8 @@ public Geometry Data
 ```csharp
 public static readonly DependencyProperty FillProperty = DependencyProperty.Register(
     "Fill", typeof(Brush), typeof(<class>), new PropertyMetadata(null));
+```
+```csharp
 public Brush Fill
 {
     get { return (Brush)this.GetValue(FillProperty); }
