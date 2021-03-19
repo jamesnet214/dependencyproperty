@@ -144,7 +144,7 @@ public Brush Fill
 ```
 
 
-#### Double Type
+### Double Type
 ```csharp
 public static readonly DependencyProperty IconWidthProperty = DependencyProperty.Register(
     "IconWidth", typeof(double), typeof(<class>), new PropertyMetadata(0));
@@ -157,7 +157,7 @@ public double IconWidth
 }
 ```
 
-#### ICommand
+### ICommand Type
 ```csharp
 public static readonly DependencyProperty SelectionCommandProperty = DependencyProperty.Register(
     "SelectionCommand", typeof(ICommand), typeof(<class>));
