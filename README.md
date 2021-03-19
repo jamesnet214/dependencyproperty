@@ -44,7 +44,7 @@ namespace System.Windows
 
 ### 3.1. Standard
 #### Int type
-Register DependencyProperty
+Register Int-Type Dependency Property
 ```csharp
 public static readonly DependencyProperty AgeProperty = DependencyProperty.Register(
     "Age", typeof(int), typeof(<class>), new PropertyMetadata(0));
