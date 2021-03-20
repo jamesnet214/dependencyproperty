@@ -50,15 +50,16 @@ DependencyProperty 선언 구조를 응용하여 필요로 하는 속성 `Type`�
 #### 2.1. Example of dependency-properties by type
 필요한 속성을 매번 만들 수도 있겠지만 이 문서에서는 가능한 모든 타입의 속성을 열거하고 기본 선언 구조를 제공합니다.
 #### Standard
-- [Int](#Register-Int)
-- [Boolean](#Boolean-Type)
+- [Int](#[Register]-Int)
+- [Boolean](#[Standard]-Boolean)
 - [String](#String-Type)
 - [Object](#Object-Type)
 - [Geometry](#Geometry-Type)
 - [Brush](#Brush-Type)
 - [Double](#Double-Type)
 - [ICommand](#ICommand-Type)
-### Register Int
+- 
+#### [Standard] Int
 Register `Int` Type Dependency Property
 ```csharp
 public static readonly DependencyProperty AgeProperty = DependencyProperty.Register(
@@ -72,7 +73,7 @@ public int Age
 }
 ```
 
-### Boolean Type
+#### [Standard] Boolean
 ```csharp
 public static readonly DependencyProperty IsUsedProperty = DependencyProperty.Register(
     "IsUsed", typeof(bool), typeof(<class>), new PropertyMetadata(false));
@@ -168,7 +169,7 @@ public ICommand SelectionCommand
 #### Extender
 - [String](#RegisterAttached-String)
 
-### 3.2. RegisterAttached String
+#### Extender String
 ```csharp
 class PasswordExtender
 {
