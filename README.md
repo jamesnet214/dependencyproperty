@@ -46,9 +46,12 @@ namespace System.Windows
 ```
 
 ## 2. Declaration
-DependencyProperty 선언 구조를 응용하여 필요로 하는 속성 `Type`을 만들 수 있습니다.
+DependencyProperty는 정형화된 구조체를 사용하여 등록해야 합니다.
+- Standard
+- Extender
+
 #### 2.1. Standard
-필요한 속성을 매번 만들 수도 있겠지만 이 문서에서는 가능한 모든 타입의 속성을 열거하고 기본 선언 구조를 제공합니다.
+닷넷프레임워크에서 제공하는 모든 `public` 타입을 DependencyPropery로 등록할 수 있습니다.
 - [Int](#Standard-Int)
 - [Boolean](#Standard-Boolean)
 - [String](#String-Type)
