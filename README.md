@@ -61,7 +61,7 @@ Standard 방식은 `DependencyProperty.Register` 메서드를 통해 `Owner UI`�
 - [Double](#217-Double-Type)
 - [ICommand](#218-ICommand-Type)
 - 
-#### 2.1.1. [Standard] Int
+### 2.1.1. [Standard] Int
 Register `Int` Type Dependency Property
 ```csharp
 public static readonly DependencyProperty AgeProperty = DependencyProperty.Register(
@@ -74,8 +74,8 @@ public int Age
     set { this.SetValue(AgeProperty, value); }
 }
 ```
-[Standard]   
-#### 2.1.2. Boolean
+ 
+### 2.1.2. [Standard] Boolean
 ```csharp
 public static readonly DependencyProperty IsUsedProperty = DependencyProperty.Register(
     "IsUsed", typeof(bool), typeof(<class>), new PropertyMetadata(false));
@@ -88,7 +88,7 @@ public bool IsUsed
 }
 ```
 
-#### 2.1.3. [Standard] String
+### 2.1.3. [Standard] String
 ```csharp
 public static readonly DependencyProperty PlaceHolderProperty = DependencyProperty.Register(
     "Header", typeof(string), typeof(<class>), new PropertyMetadata(""));
@@ -102,7 +102,7 @@ public string PlaceHolder
 ```
 
 #### 2.1.4. [Standard] Object
-```csharp
+``csharp
 public static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
     "Content", typeof(object), typeof(<class>), new PropertyMetadata(""));
 ```
@@ -128,7 +128,7 @@ public Geometry Data
 }
 ```
 
-#### 2.1.6. [Standard] Brush
+### 2.1.6. [Standard] Brush
 ```csharp
 public static readonly DependencyProperty FillProperty = DependencyProperty.Register(
     "Fill", typeof(Brush), typeof(<class>), new PropertyMetadata(null));
@@ -142,7 +142,7 @@ public Brush Fill
 ```
 
 
-#### 2.1.7. [Standard] Double
+### 2.1.7. [Standard] Double
 ```csharp
 public static readonly DependencyProperty IconWidthProperty = DependencyProperty.Register(
     "IconWidth", typeof(double), typeof(<class>), new PropertyMetadata(0));
@@ -171,7 +171,7 @@ public ICommand SelectionCommand
 #### 2.2. Extender
 - [String](#221-Extend-String)
 
-#### 2.2.1. [Extender] String
+### 2.2.1. [Extender] String
 ```csharp
 class PasswordExtender
 {
@@ -179,25 +179,21 @@ class PasswordExtender
         DependencyProperty.RegisterAttached("Password",
         typeof(string), typeof(PasswordExtender),
         new FrameworkPropertyMetadata(string.Empty, OnPasswordPropertyChanged));
-}
-```
-```csharp
-public static string GetPassword(DependencyObject dp)
-{
-    return (string)dp.GetValue(PasswordProperty);
-}
+    public static string GetPassword(DependencyObject dp)
+    {
+        return (string)dp.GetValue(PasswordProperty);
+    }
 
-public static void SetPassword(DependencyObject dp, string value)
-{
-    dp.SetValue(PasswordProperty, value);
+    public static void SetPassword(DependencyObject dp, string value)
+    {
+        dp.SetValue(PasswordProperty, value);
+    }
+    
+    private static void OnPasswordPropertyChanged(DependencyObject sender,
+        DependencyPropertyChangedEventArgs e)
+    {
+    }
 }
-```
-```csharp
-private static void OnPasswordPropertyChanged(DependencyObject sender,
-    DependencyPropertyChangedEventArgs e)
-{
-}
-```
 
 ### 3.3. Value Callback Changed
 ```csharp
