@@ -102,7 +102,7 @@ public string PlaceHolder
 ```
 
 ### 2.1.4. [Standard] Object
-``csharp
+```csharp
 public static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
     "Content", typeof(object), typeof(<class>), new PropertyMetadata(""));
 ```
