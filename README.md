@@ -274,7 +274,7 @@ private static void OnPasswordPropertyChanged(DependencyObject sender, Dependenc
 <br />
 
 ## 5. Quiz
-1. Which of the following is a Access Modifier for DependencyProperty ?  
+1. Which is the appropriate Access Modifier for the DependencyProperty class? 
 - ① Abstruct   
 - ② Sealed   
 - ③ Virtual   
