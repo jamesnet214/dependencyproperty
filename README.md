@@ -56,7 +56,7 @@ Standard 방식은 `DependencyProperty.Register` 메서드를 통해 `Owner UI`�
 - [Brush](#216-Brush-Type)
 - [Double](#217-Double-Type)
 - [ICommand](#218-ICommand-Type)
-- 
+
 #### 2.1.1. [Standard] Int
 Register `Int` Type Dependency Property
 ```csharp
