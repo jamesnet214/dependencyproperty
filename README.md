@@ -46,12 +46,12 @@ namespace System.Windows
 ```
 
 ## 2. Declaration
-DependencyProperty는 정형화된 구조체를 사용하여 등록해야 합니다.
-- Standard
-- Extender
+DependencyProperty는 두 가지 방식으로 등록할 수 있습니다.
+- [Standard](#2.1.-Standard)
+- [Extender](#2.2.-Extender)
 
 #### 2.1. Standard
-닷넷프레임워크에서 제공하는 모든 `public` 타입을 DependencyPropery로 등록할 수 있습니다.
+Standard 방식은 `DependencyProperty.Register` 메서드를 통해 `Owner UI`클래스에 바로 연결(등록)하는 방식입니다.
 - [Int](#Standard-Int)
 - [Boolean](#Standard-Boolean)
 - [String](#String-Type)
@@ -88,7 +88,7 @@ public bool IsUsed
 }
 ```
 
-### String Type
+#### 2.1.3. [Standard] String
 ```csharp
 public static readonly DependencyProperty PlaceHolderProperty = DependencyProperty.Register(
     "Header", typeof(string), typeof(<class>), new PropertyMetadata(""));
@@ -101,7 +101,7 @@ public string PlaceHolder
 }
 ```
 
-### Object Type
+#### 2.1.4. [Standard] Object
 ```csharp
 public static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
     "Content", typeof(object), typeof(<class>), new PropertyMetadata(""));
@@ -128,7 +128,7 @@ public Geometry Data
 }
 ```
 
-### Brush Type
+#### 2.1.5. [Standard] Brush
 ```csharp
 public static readonly DependencyProperty FillProperty = DependencyProperty.Register(
     "Fill", typeof(Brush), typeof(<class>), new PropertyMetadata(null));
@@ -142,7 +142,7 @@ public Brush Fill
 ```
 
 
-### Double Type
+#### 2.1.6. [Standard] Double
 ```csharp
 public static readonly DependencyProperty IconWidthProperty = DependencyProperty.Register(
     "IconWidth", typeof(double), typeof(<class>), new PropertyMetadata(0));
@@ -155,7 +155,7 @@ public double IconWidth
 }
 ```
 
-### ICommand Type
+### 2.1.7. [Standard] ICommand
 ```csharp
 public static readonly DependencyProperty SelectionCommandProperty = DependencyProperty.Register(
     "SelectionCommand", typeof(ICommand), typeof(<class>));
@@ -168,10 +168,10 @@ public ICommand SelectionCommand
 }
 ```
 
-#### Extender
-- [String](#RegisterAttached-String)
+#### 2.2. Extender
+- [String](#Extend-String)
 
-#### Extender String
+#### 2.2.1. [Extender] String
 ```csharp
 class PasswordExtender
 {
