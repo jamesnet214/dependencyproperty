@@ -9,7 +9,8 @@ Official Website [Here.](https://devncore.org)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
 ## _What is the DependencyProperty?_
-DependencyPropery는 닷넷프레임워크 WPF의 가장 깊은 곳에 숨어 있는 중요한 설계 기반 중 하나의 클래스입니다. 이 클래스는 닷넷프레임워크로부터 sealed를 통해 보호 받고 있으며, 이를 통해 등록된 속성은 단순히 필드 값을 저장하는 것 뿐만 아니라 클래스 내부에서 제공하는 다양한 기능들을 활용할 수 있다는 점에서 1차원적인 일반 Property와는 특별한 차별점을 두고 있습니다. 
+DependencyPropery는 닷넷프레임워크 WPF의 가장 깊은 곳에 숨어 있는 중요한 설계 기반 중 하나의 클래스입니다.    
+이 클래스는 닷넷프레임워크로부터 sealed를 통해 보호 받고 있으며, 이를 통해 등록된 속성은 단순히 필드 값을 저장하는 것 뿐만 아니라 클래스 내부에서 제공하는 다양한 기능들을 활용할 수 있다는 점에서 1차원적인 일반 Property와는 특별한 차별점을 두고 있습니다. 
 
 가장 중요한 점은 데이터 바인딩을위한 모든 기반이 준비되어 있다는 것입니다. 무언가를 바인딩하면 변경 될 때 알림을 보낼수도 있습니다. 
 
