@@ -9,13 +9,11 @@ Official Website [Here.](https://devncore.org)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
 ## _What is the DependencyProperty?_
-**DependencyProperty**는 DependencyObject에서 파생되는 클래스의 속성이며, 단순히 백업 필드를 사용하여 값을 저장하는 것이 아니라 DependencyObject에서 일부 도우미 메서드를 사용한다는 점에서 특별합니다.   
+DependencyPropery는 닷넷프레임워크 WPF의 가장 깊은 곳에 숨어 있는 중요한 설계 기반 중 하나의 클래스입니다. 이 클래스는 닷넷프레임워크로부터 sealed를 통해 보호 받고 있으며, 이를 통해 등록된 속성은 단순히 필드 값을 저장하는 것 뿐만 아니라 클래스 내부에서 제공하는 다양한 기능들을 활용할 수 있다는 점에서 1차원적인 일반 Property와는 특별한 차별점을 두고 있습니다. 그리고 가장 중요한 점은 데이터 바인딩을위한 모든 기반이 준비되어 있다는 것입니다. 무언가를 바인딩하면 변경 될 때 알림을 보낼수도 있습니다. 특히 MVVM 개발 방법론에서는 이미 닷넷프레임워크에서 제공되고 있는 DependencyProperty가 고정적으로 한정되어 있기 때문에 Binding사용을 더욱 더 적극적으로 활용하기 위해서는 반드시 이 기술이 필요합니다.
 
-가장 좋은 점은 데이터 바인딩을위한 모든 배관이 내장되어 있다는 것입니다. 무언가를 바인딩하면 변경 될 때 알림을 보냅니다.
-
-여러분이 MVVM 패턴을 더욱 더 적극적으로 활용하기 위해서는 `DependencyProperty`가 필연적으로 필요합니다.
+ 꾸준히 내용을 연구하는 것이 중요합니다.
 ## 1. Orverview
-이 문서는 DependencyProperty 속성에 관련된 연구 기술 논문입니다. WPF는 이 의존 프로퍼티를 통해 강력한 Binding, 프로퍼티 상속 구조를 지니고 있기 때문에 기술의 범위와 깊이에 있어 다소 높은 난이도를 필요로 합니다.
+DependencyProperty는 WPF의 핵심적인 설계 요소 중 하나입니다. 이는 하나의 단일 기능이 아닌 여러 개념과 논리 구조가 복합적으로 포함되어 있기 때문에 심도 있고 깊이 있는 연구가 필요한 부분이며  기술의 범위와 깊이에 있어 다소 높은 난이도를 필요로 합니다.
 #### 1.1. Class Version 
 The first target version of DependencyProperty is based on .NET Frmaeowrk `3.0`
 | Target Name    | Version                                                                                  |
