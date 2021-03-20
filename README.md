@@ -47,9 +47,8 @@ namespace System.Windows
 
 ## 2. Declaration
 DependencyProperty 선언 구조를 응용하여 필요로 하는 속성 `Type`을 만들 수 있습니다.
-#### 2.1. Example of dependency-properties by type
+#### 2.1. Standard
 필요한 속성을 매번 만들 수도 있겠지만 이 문서에서는 가능한 모든 타입의 속성을 열거하고 기본 선언 구조를 제공합니다.
-#### Standard
 - [Int](#Standard-Int)
 - [Boolean](#Standard-Boolean)
 - [String](#String-Type)
@@ -59,7 +58,7 @@ DependencyProperty 선언 구조를 응용하여 필요로 하는 속성 `Type`�
 - [Double](#Double-Type)
 - [ICommand](#ICommand-Type)
 - 
-#### [Standard] Int
+#### 2.1.1. [Standard] Int
 Register `Int` Type Dependency Property
 ```csharp
 public static readonly DependencyProperty AgeProperty = DependencyProperty.Register(
@@ -73,7 +72,7 @@ public int Age
 }
 ```
 
-#### [Standard] Boolean
+#### 2.1.2. [Standard] Boolean
 ```csharp
 public static readonly DependencyProperty IsUsedProperty = DependencyProperty.Register(
     "IsUsed", typeof(bool), typeof(<class>), new PropertyMetadata(false));
