@@ -26,7 +26,7 @@ The MVVM development methodology already has a limited set of DependencyProperty
 DependencyProperty is one of the key design elements of the WPF. This involves a combination of concepts and logical structures rather than a single function, requiring in-depth research and a somewhat higher degree of difficulty in the scope and depth of the technology.
 
 #### 1.1. Class Version 
-The first target version of DependencyProperty is based on .NET Frmaeowrk `3.0`
+The first target version of DependencyProperty is based on .NET Framework `3.0`
 | Target Name    | Version                                                                                  |
 |:---------------|:-----------------------------------------------------------------------------------------|
 | .NET           | 5.0                                                                                      |
@@ -224,6 +224,7 @@ private static void PasswordPropertyChanged(DependencyObject d, DependencyProper
     
 }
 ```
+<br />
 
 ### 4. CoerceValueCallback
 ```csharp
@@ -270,30 +271,33 @@ private static void OnPasswordPropertyChanged(DependencyObject sender, Dependenc
     }
 }
 ```
-## 5. Quiz Time
-1. 다음 중 DependencyProperty의 클래스 접근제한자로 알맞은 것은?   
+<br />
+
+## 5. Quiz
+1. Which of the following is a Access Modifier for DependencyProperty ?  
 - ① Abstruct   
 - ② Sealed   
 - ③ Virtual   
 - ④ struct   
 
-2. DependencyProperty를 사용하기 위해 필요한 Namespace를 고르시오.   
+2. Select the Namespace you need to use the DependencyProperty.
 - ① using System;   
 - ② using System.Windows;   
 - ③ using System.Windows.Threading;   
 - ④ using System.ComponentModel;   
 
-3. DependencyProperty는 닷넷프레임워크의 어느 Assembly에서 제공하는 클래스인가?   
+3. What assembly in the .Net Framework provides DependencyProperty class?
 - ① System.dll;   
 - ② System.Windows.dll;   
 - ③ WindowsBase.dll;   
 - ④ PresentationFramework.dll;  
+<br />
 
 ## 6. References
 ### 6.1 Community Docs
 #### WPF Tutorial
 > DependencyProperties [here.](https://www.wpftutorial.net/DependencyProperties.html)   
-#### So Documentation
+#### SO Documentation
 > Dependency-Properties [here.](https://sodocumentation.net/wpf/topic/2914/dependency-properties)   
 #### Microsoft Docs
 > DependencyProperty Class [Here.](https://docs.microsoft.com/ko-kr/dotnet/api/system.windows.dependencyproperty?view=netframework-4.8)   
