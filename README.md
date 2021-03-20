@@ -50,7 +50,7 @@ DependencyProperty는 두 가지 방식으로 등록할 수 있습니다.
 - [Standard](#21-Standard)
 - [Extender](#22-Extender)
 
-#### 2.1. Standard
+### 2.1. Standard
 Standard 방식은 `DependencyProperty.Register` 메서드를 통해 `Owner UI`클래스에 바로 연결(등록)하는 방식입니다.
 - [Int](#211-Standard-Int)
 - [Boolean](#212-Standard-Boolean)
@@ -101,7 +101,7 @@ public string PlaceHolder
 }
 ```
 
-#### 2.1.4. [Standard] Object
+### 2.1.4. [Standard] Object
 ``csharp
 public static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
     "Content", typeof(object), typeof(<class>), new PropertyMetadata(""));
@@ -168,7 +168,7 @@ public ICommand SelectionCommand
 }
 ```
 
-#### 2.2. Extender
+### 2.2. Extender
 - [String](#221-Extend-String)
 
 ### 2.2.1. [Extender] String
