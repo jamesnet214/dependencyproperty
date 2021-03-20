@@ -74,8 +74,8 @@ public int Age
     set { this.SetValue(AgeProperty, value); }
 }
 ```
-
-#### 2.1.2. [Standard] Boolean
+[Standard]   
+#### 2.1.2. Boolean
 ```csharp
 public static readonly DependencyProperty IsUsedProperty = DependencyProperty.Register(
     "IsUsed", typeof(bool), typeof(<class>), new PropertyMetadata(false));
