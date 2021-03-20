@@ -197,7 +197,7 @@ class PasswordExtender
 }
 ```
 
-### 3.3. Value Callback Changed
+### 3. Property Changed
 ```csharp
 public string Password
 {
@@ -214,7 +214,7 @@ private static void PasswordPropertyChanged(DependencyObject d, DependencyProper
 }
 ```
 
-### 3.4. Binding Core Callback MVVM
+### 4. CoerceValueCallback
 ```csharp
 public string Password
 {
@@ -259,7 +259,7 @@ private static void OnPasswordPropertyChanged(DependencyObject sender, Dependenc
     }
 }
 ```
-## 4. Quiz Time
+## 5. Quiz Time
 1. 다음 중 DependencyProperty의 클래스 접근제한자로 알맞은 것은?   
 - ① Abstruct   
 - ② Sealed   
@@ -278,8 +278,8 @@ private static void OnPasswordPropertyChanged(DependencyObject sender, Dependenc
 - ③ WindowsBase.dll;   
 - ④ PresentationFramework.dll;  
 
-## 99. References
-### 99.1 Community Docs
+## 6. References
+### 6.1 Community Docs
 #### WPF Tutorial
 > DependencyProperties [here.](https://www.wpftutorial.net/DependencyProperties.html)   
 #### So Documentation
