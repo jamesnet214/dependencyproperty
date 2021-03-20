@@ -61,7 +61,7 @@ Standard 방식은 `DependencyProperty.Register` 메서드를 통해 `Owner UI`�
 - [Double](#217-Double-Type)
 - [ICommand](#218-ICommand-Type)
 - 
-### 2.1.1. [Standard] Int
+#### 2.1.1. [Standard] Int
 Register `Int` Type Dependency Property
 ```csharp
 public static readonly DependencyProperty AgeProperty = DependencyProperty.Register(
@@ -75,7 +75,7 @@ public int Age
 }
 ```
  
-### 2.1.2. [Standard] Boolean
+#### 2.1.2. [Standard] Boolean
 ```csharp
 public static readonly DependencyProperty IsUsedProperty = DependencyProperty.Register(
     "IsUsed", typeof(bool), typeof(<class>), new PropertyMetadata(false));
@@ -101,7 +101,7 @@ public string PlaceHolder
 }
 ```
 
-### 2.1.4. [Standard] Object
+#### 2.1.4. [Standard] Object
 ```csharp
 public static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
     "Content", typeof(object), typeof(<class>), new PropertyMetadata(""));
@@ -115,7 +115,7 @@ public object Content
 ```
 It is actually the same as the Content Property included in the ContentControl class. If you inherit ContentControl and create a control that defines ContentPresenter, use Object-type DependencyProperty.
 
-### 2.1.5. [Standard] Geometry
+#### 2.1.5. [Standard] Geometry
 ```csharp
 public static readonly DependencyProperty DataProperty = DependencyProperty.Register(
     "Data", typeof(Geometry), typeof(<침ㄴㄴ>), new PropertyMetadata(null));
@@ -128,7 +128,7 @@ public Geometry Data
 }
 ```
 
-### 2.1.6. [Standard] Brush
+#### 2.1.6. [Standard] Brush
 ```csharp
 public static readonly DependencyProperty FillProperty = DependencyProperty.Register(
     "Fill", typeof(Brush), typeof(<class>), new PropertyMetadata(null));
@@ -142,7 +142,7 @@ public Brush Fill
 ```
 
 
-### 2.1.7. [Standard] Double
+#### 2.1.7. [Standard] Double
 ```csharp
 public static readonly DependencyProperty IconWidthProperty = DependencyProperty.Register(
     "IconWidth", typeof(double), typeof(<class>), new PropertyMetadata(0));
@@ -155,7 +155,7 @@ public double IconWidth
 }
 ```
 
-### 2.1.8. [Standard] ICommand
+#### 2.1.8. [Standard] ICommand
 ```csharp
 public static readonly DependencyProperty SelectionCommandProperty = DependencyProperty.Register(
     "SelectionCommand", typeof(ICommand), typeof(<class>));
@@ -171,7 +171,7 @@ public ICommand SelectionCommand
 ### 2.2. Extender
 - [String](#221-Extend-String)
 
-### 2.2.1. [Extender] String
+#### 2.2.1. [Extender] String
 ```csharp
 class PasswordExtender
 {
