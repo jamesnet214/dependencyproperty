@@ -247,15 +247,16 @@ private static void OnPasswordPropertyChanged(DependencyObject sender, Dependenc
         p._password.Password = args.NewValue?.ToString();
         p._password.PasswordChanged += p._password_PasswordChanged;
     }
-}
-private static object CoercePassword(DependencyObject d, object value)
-{
-    if (value == null)
-    {
-        return String.Empty;
-    }
 
-    return value;
+    private static object CoercePassword(DependencyObject d, object value)
+    {
+        if (value == null)
+        {
+            return String.Empty;
+        }
+
+        return value;
+    }
 }
 ```
 ## 4. Quiz Time
