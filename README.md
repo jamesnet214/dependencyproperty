@@ -47,19 +47,19 @@ namespace System.Windows
 
 ## 2. Declaration
 DependencyProperty는 두 가지 방식으로 등록할 수 있습니다.
-- [Standard](#2.1.-Standard)
-- [Extender](#2.2.-Extender)
+- [Standard](#21-Standard)
+- [Extender](#22-Extender)
 
 #### 2.1. Standard
 Standard 방식은 `DependencyProperty.Register` 메서드를 통해 `Owner UI`클래스에 바로 연결(등록)하는 방식입니다.
-- [Int](#Standard-Int)
-- [Boolean](#Standard-Boolean)
-- [String](#String-Type)
-- [Object](#Object-Type)
-- [Geometry](#Geometry-Type)
-- [Brush](#Brush-Type)
-- [Double](#Double-Type)
-- [ICommand](#ICommand-Type)
+- [Int](#211-Standard-Int)
+- [Boolean](#212-Standard-Boolean)
+- [String](#213-String-Type)
+- [Object](#214-Object-Type)
+- [Geometry](#215-Geometry-Type)
+- [Brush](#216-Brush-Type)
+- [Double](#217-Double-Type)
+- [ICommand](#218-ICommand-Type)
 - 
 #### 2.1.1. [Standard] Int
 Register `Int` Type Dependency Property
@@ -115,7 +115,7 @@ public object Content
 ```
 It is actually the same as the Content Property included in the ContentControl class. If you inherit ContentControl and create a control that defines ContentPresenter, use Object-type DependencyProperty.
 
-### Geometry Type
+### 2.1.5. [Standard] Geometry
 ```csharp
 public static readonly DependencyProperty DataProperty = DependencyProperty.Register(
     "Data", typeof(Geometry), typeof(<침ㄴㄴ>), new PropertyMetadata(null));
@@ -128,7 +128,7 @@ public Geometry Data
 }
 ```
 
-#### 2.1.5. [Standard] Brush
+#### 2.1.6. [Standard] Brush
 ```csharp
 public static readonly DependencyProperty FillProperty = DependencyProperty.Register(
     "Fill", typeof(Brush), typeof(<class>), new PropertyMetadata(null));
@@ -142,7 +142,7 @@ public Brush Fill
 ```
 
 
-#### 2.1.6. [Standard] Double
+#### 2.1.7. [Standard] Double
 ```csharp
 public static readonly DependencyProperty IconWidthProperty = DependencyProperty.Register(
     "IconWidth", typeof(double), typeof(<class>), new PropertyMetadata(0));
@@ -155,7 +155,7 @@ public double IconWidth
 }
 ```
 
-### 2.1.7. [Standard] ICommand
+### 2.1.8. [Standard] ICommand
 ```csharp
 public static readonly DependencyProperty SelectionCommandProperty = DependencyProperty.Register(
     "SelectionCommand", typeof(ICommand), typeof(<class>));
@@ -169,7 +169,7 @@ public ICommand SelectionCommand
 ```
 
 #### 2.2. Extender
-- [String](#Extend-String)
+- [String](#221-Extend-String)
 
 #### 2.2.1. [Extender] String
 ```csharp
