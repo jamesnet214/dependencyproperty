@@ -1,23 +1,30 @@
 # DependencyProperty
-### Our
-Contributors [Here.](https://devncore.org/aboutus/contributors)   
+### About us
+Contributors [Here.](https://devncore.org/aboutus/contributors)
+
 ### DevNcore
 GitHub Organization [Here.](https://github.com/devncore)   
-Official Website [Here.](https://devncore.org)   
+Official Website [Here.](https://devncore.org) 
+
 ### License Policy
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
+<br />  
+
 ## _What is the DependencyProperty?_
-DependencyPropery는 닷넷프레임워크 WPF의 가장 깊은 곳에 숨어 있는 중요한 설계 기반 중 하나의 클래스입니다.   
+The __DependencyProperty__ class is one of the most important design bases hidden deep in the .Net Framework WPF.
 
-이 클래스는 닷넷프레임워크로부터 sealed를 통해 보호 받고 있으며, 이를 통해 등록된 속성은 단순히 필드 값을 저장하는 것 뿐만 아니라 클래스 내부에서 제공하는 다양한 기능들을 활용할 수 있다는 점에서 1차원적인 일반 Property와는 특별한 차별점을 두고 있습니다. 
+This class is protected by sealed from the .Net Framework.
+This property differs from the one-dimensional general property in that it not only stores field values, but also takes advantage of the various functions provided within the class.
+Most importantly, there is a full foundation for data binding. You can also send notifications whenever you bind something.  
 
-가장 중요한 점은 데이터 바인딩을위한 모든 기반이 준비되어 있다는 것입니다. 무언가를 바인딩하면 변경 될 때 알림을 보낼수도 있습니다. 
+The MVVM development methodology already has a limited set of DependencyProperty provided by the .Net Framework, so this technology is essential to more aggressive use of Binding.
 
-특히 MVVM 개발 방법론에서는 이미 닷넷프레임워크에서 제공되고 있는 DependencyProperty가 고정적으로 한정되어 있기 때문에 Binding사용을 더욱 더 적극적으로 활용하기 위해서는 반드시 이 기술이 필요합니다.
-## 1. Orverview
-DependencyProperty는 WPF의 핵심적인 설계 요소 중 하나입니다. 이는 하나의 단일 기능이 아닌 여러 개념과 논리 구조가 복합적으로 포함되어 있기 때문에 심도 있고 깊이 있는 연구가 필요한 부분이며  기술의 범위와 깊이에 있어 다소 높은 난이도를 필요로 합니다.
+
+## 1. Overview
+DependencyProperty is one of the key design elements of the WPF. This involves a combination of concepts and logical structures rather than a single function, requiring in-depth research and a somewhat higher degree of difficulty in the scope and depth of the technology.
+
 #### 1.1. Class Version 
 The first target version of DependencyProperty is based on .NET Frmaeowrk `3.0`
 | Target Name    | Version                                                                                  |
@@ -26,7 +33,7 @@ The first target version of DependencyProperty is based on .NET Frmaeowrk `3.0`
 | .NET Core      | 3.0, 3.1                                                                                 |
 | .NET Framework | 3.0, 3.5, 4.0, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8              |
 
-##### _So .NET Framework 2.0 doesn't allow us to use DependencyProperty?_   
+##### _So, .NET Framework 2.0 doesn't allow us to use DependencyProperty?_   
 > That's right. WPF starts at 3.0. :smile:
 
 #### 1.2. Class Information
@@ -35,7 +42,7 @@ The first target version of DependencyProperty is based on .NET Frmaeowrk `3.0`
 | WindowsBase.dll      | System.Windows              | `sealed`            | `Object`        |
 
 #### 1.3. Class Structure
-DependencyPropery 클래스의 Access 권한은 `sealed`이므로 사용자 정의 클래스에서 직접적으로 상속받을 수 없는 구조를 갖고 있습니다.
+Access rights in the DependencyProperty class is `sealed` and have a structure that cannot be inherited directly from the custom class.
 
 ```csharp
 namespace System.Windows
@@ -46,14 +53,15 @@ namespace System.Windows
     }   
 }
 ```
+<br />
 
 ## 2. Declaration
-DependencyProperty는 두 가지 방식으로 등록할 수 있습니다.
+DependencyProperty can be registered in two ways.
 - [Standard](#21-Standard)
 - [Extender](#22-Extender)
 
 ### 2.1. Standard
-Standard 방식은 `DependencyProperty.Register` 메서드를 통해 `Owner UI`클래스에 바로 연결(등록)하는 방식입니다.
+Standard method is to connect(register) directly to the `Owner UI` class through the `DependencyProperty.Register` method.
 - [Int](#211-Standard-Int)
 - [Boolean](#212-Standard-Boolean)
 - [String](#213-String-Type)
@@ -89,10 +97,10 @@ public bool IsUsed
 }
 ```
 
-### 2.1.3. [Standard] String
+#### 2.1.3. [Standard] String
 ```csharp
 public static readonly DependencyProperty PlaceHolderProperty = DependencyProperty.Register(
-    "Header", typeof(string), typeof(<class>), new PropertyMetadata(""));
+    "PlaceHolder", typeof(string), typeof(<class>), new PropertyMetadata(""));
 ```
 ```csharp
 public string PlaceHolder
@@ -103,6 +111,10 @@ public string PlaceHolder
 ```
 
 #### 2.1.4. [Standard] Object
+
+It is actually the same as the Content Property included in the `ContentControl` class.  
+If you inherit ContentControl and create a control that defines ContentPresenter, use Object-type DependencyProperty.
+
 ```csharp
 public static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
     "Content", typeof(object), typeof(<class>), new PropertyMetadata(""));
@@ -114,12 +126,11 @@ public object Content
     set { this.SetValue(ContentProperty, value); }
 }
 ```
-It is actually the same as the Content Property included in the ContentControl class. If you inherit ContentControl and create a control that defines ContentPresenter, use Object-type DependencyProperty.
 
 #### 2.1.5. [Standard] Geometry
 ```csharp
 public static readonly DependencyProperty DataProperty = DependencyProperty.Register(
-    "Data", typeof(Geometry), typeof(<침ㄴㄴ>), new PropertyMetadata(null));
+    "Data", typeof(Geometry), typeof(<class>), new PropertyMetadata(null));
 ```
 ```csharp
 public Geometry Data
@@ -168,10 +179,9 @@ public ICommand SelectionCommand
     set { this.SetValue(SelectionCommandProperty, value); }
 }
 ```
+<br />
 
 ### 2.2. Extender
-- [String](#221-Extend-String)
-
 #### 2.2.1. [Extender] String
 ```csharp
 class PasswordExtender
@@ -196,6 +206,7 @@ class PasswordExtender
     }
 }
 ```
+<br />
 
 ### 3. Property Changed
 ```csharp
