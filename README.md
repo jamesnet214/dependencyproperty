@@ -126,9 +126,9 @@ public object Content
     set { this.SetValue(ContentProperty, value); }
 }
 ```
-##### Exists Properties
-- Content in <ContentControl> (Button, CheckBox, userControl, Window Etc...)
-- Tag in <Control> (Button, Window, Grid, StackPanel, Etc...)
+#### Exists Properties
+- Content in `ContentControl` (Button, CheckBox, userControl, Window Etc...)
+- Tag in `Control` (Button, Window, Grid, StackPanel, Etc...)
 
 #### 2.1.5. [Standard] Geometry
 ```csharp
@@ -143,7 +143,7 @@ public Geometry Data
 }
 ```
 #### Exists Properties
-- Data in Path
+- Data in `Path`
 
 #### 2.1.6. [Standard] Brush
 ```csharp
