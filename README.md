@@ -127,8 +127,8 @@ public object Content
 }
 ```
 ##### Exists Properties
-- Content in Button, CheckBox, Expander, RadioButton, UserControl, Window
-- Tag in all Controls
+- Content in <ContentControl> (Button, CheckBox, userControl, Window Etc...)
+- Tag in <Control> (Button, Window, Grid, StackPanel, Etc...)
 
 #### 2.1.5. [Standard] Geometry
 ```csharp
@@ -142,6 +142,8 @@ public Geometry Data
     set { this.SetValue(DataProperty, value); }
 }
 ```
+#### Exists Properties
+- Data in Path
 
 #### 2.1.6. [Standard] Brush
 ```csharp
