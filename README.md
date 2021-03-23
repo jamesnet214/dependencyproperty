@@ -126,7 +126,7 @@ public object Content
     set { this.SetValue(ContentProperty, value); }
 }
 ```
-#### Content Example
+##### exists Properties
 - Button Content
 - CheckBox Content
 - Expander Content
