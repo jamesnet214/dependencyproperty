@@ -126,6 +126,13 @@ public object Content
     set { this.SetValue(ContentProperty, value); }
 }
 ```
+#### Content Example
+- Button Content
+- CheckBox Content
+- Expander Content
+- RadioButton
+- UserControl Content
+- Window Content
 
 #### 2.1.5. [Standard] Geometry
 ```csharp
