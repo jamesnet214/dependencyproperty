@@ -126,13 +126,9 @@ public object Content
     set { this.SetValue(ContentProperty, value); }
 }
 ```
-##### exists Properties
-- Button Content
-- CheckBox Content
-- Expander Content
-- RadioButton
-- UserControl Content
-- Window Content
+##### Exists Properties
+- Content in Button, CheckBox, Expander, RadioButton, UserControl, Window
+- Tag in all Controls
 
 #### 2.1.5. [Standard] Geometry
 ```csharp
