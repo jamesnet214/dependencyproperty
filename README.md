@@ -27,6 +27,7 @@ DependencyProperty is one of the key design elements of the WPF. This involves a
 
 #### 1.1. Class Version 
 The first target version of DependencyProperty is based on .NET Framework `3.0`
+
 | Target Name    | Version                                                                                  |
 |:---------------|:-----------------------------------------------------------------------------------------|
 | .NET           | 5.0                                                                                      |
@@ -53,7 +54,6 @@ namespace System.Windows
     }   
 }
 ```
-<br />
 
 ## 2. Declaration
 DependencyProperty can be registered in two ways.
@@ -144,7 +144,6 @@ public Geometry Data
 ```
 #### Exists Properties
 - Data in `Path`
-- 
 
 #### 2.1.6. [Standard] Brush
 ```csharp
