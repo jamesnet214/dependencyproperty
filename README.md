@@ -148,8 +148,8 @@ public object Content
 }
 ```
 #### Exists Properties
-- Content in `ContentControl` (Button, CheckBox, userControl, Window Etc...)   
-- Tag in `Control` (Button, Window, Grid, StackPanel, Etc...)
+- Content in `ContentControl` (Button, CheckBox, UserControl, Window ···)   
+- Tag in `Control` (Button, Window, Grid, StackPanel ···)
 
 #### 2.1.5. [Standard] Geometry
 ```csharp
