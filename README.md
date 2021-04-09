@@ -55,6 +55,8 @@ namespace System.Windows
 }
 ```
 ## Did You Know That?
+- [x] DependencyProperty 속성은 일반적인 속성처럼도 사용할 수 있습니다.
+- [x] WPF에서는 오직 DependencyProperty를 통해 선언 된 속성만이 Binding을 할 수 잇습니다.
 - [x] DependencyProperty 클래스는 public 생성자가 없기 때문에 인스턴스를 생성할 수가 없습니다.
 - [x] DependencyProperty 클래스는 sealed 한정자로부터 보호받고 있기 때문에 클래스 상속이 불가능합니다.
 - [x] DependencyProperty는 WPF .NET Framework에서 가장 많이 선언되어있는 클래스입니다.
