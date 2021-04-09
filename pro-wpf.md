@@ -66,8 +66,8 @@ like this:
 ```csharp
 public class FrameworkElement: UIElement, ...
 {
- public static readonly DependencyProperty MarginProperty;
- ...
+    public static readonly DependencyProperty MarginProperty;
+    ...
 }
 ```
 
@@ -90,12 +90,12 @@ FrameworkElement class uses a static constructor to initialize the MarginPropert
 ```csharp
 static FrameworkElement()
 {
- FrameworkPropertyMetadata metadata = new FrameworkPropertyMetadata(
- new Thickness(), FrameworkPropertyMetadataOptions.AffectsMeasure);
- MarginProperty = DependencyProperty.Register("Margin",
- typeof(Thickness), typeof(FrameworkElement), metadata,
- new ValidateValueCallback(FrameworkElement.IsMarginValid));
- ...
+    FrameworkPropertyMetadata metadata = new FrameworkPropertyMetadata(
+    new Thickness(), FrameworkPropertyMetadataOptions.AffectsMeasure);
+    MarginProperty = DependencyProperty.Register("Margin",
+    typeof(Thickness), typeof(FrameworkElement), metadata,
+    new ValidateValueCallback(FrameworkElement.IsMarginValid));
+    ...
 }
 ```
 
