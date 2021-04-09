@@ -69,7 +69,7 @@ namespace System.Windows
 - [x] DependencyProperty는 WPF .NET Framework에서 가장 많이 선언되어있는 클래스입니다.
 - [x] CoerceValueCallback 이벤트를 통해 관련 값을 강제로 변환하도록 호출할 수 있습니다.
 - [x] static Register메서드는 총 3개의 Override 파라메터 형태를 제공합니다.
-- [x] DependencyProperty는 2개의 재정의 된 Override 메서드가 존재합니다. (GetHashCode(), ToString())
+- [x] DependencyProperty는 2개의 재정의 된 Override 메서드가 존재합니다. `GetHashCode()` `ToString()`
 - [x] 사실 DependencyProperty 속성의 .ToString() 값은 일반 속성과 다를 바가 없습니다.
 - [x] DependencyProperty 속성은 INotifyPropertyChanged 방식보다 복잡하지만 대신 더욱 더 강력합니다.
 - [x] DependencyProperty는 충분히 WPF를 경험하고 배우는 것이 바람직합니다.
