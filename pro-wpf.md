@@ -306,9 +306,7 @@ can be called to set and get the property value. These methods use the familiar 
 methods (inherited from the DependencyObject class). The static methods should be named
 SetPropertyName() and GetPropertyName().
 Here are the static methods that implement the Grid.Row attached property:
-www.it-ebooks.info
-Chapter 4 ■ Dependency Properties
-100
+```csharp
 public static int GetRow(UIElement element)
 {
  if (element == null)
@@ -325,6 +323,7 @@ public static void SetRow(UIElement element, int value)
  }
  element.SetValue(Grid.RowProperty, value);
 }
+```
 Here’s an example that uses code to position an element in the first row of a Grid:
 Grid.SetRow(txtElement, 0);
 Alternatively, you can call the SetValue() or GetValue() method directly and bypass the static methods:
@@ -333,9 +332,13 @@ The SetValue() method also provides one brain-twisting oddity. Although XAML doe
 can use an overloaded version of the SetValue() method in code to attach a value for any dependency
 property, even if that property isn’t defined as an attached property. For example, the following code is
 perfectly legitimate:
+
+```csharp
 ComboBox comboBox = new ComboBox();
 ...
 comboBox.SetValue(PasswordBox.PasswordCharProperty, "*");
+```
+
 Here, a value for the PasswordBox.PasswordChar property is set for a ComboBox object, even though
 PasswordBox.PasswordCharProperty is registered as an ordinary dependency property, not an attached
 property. This action won’t change the way the ComboBox works—after all, the code inside the ComboBox
