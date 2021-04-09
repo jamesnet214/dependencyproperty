@@ -56,12 +56,12 @@ namespace System.Windows
 ```
 ## Did You Know That?
 - [x] DependencyProperty 속성은 일반적인 속성처럼 사용도 가능합니다.
-- [ ] Xaml 영역에서 접근이 가능한 대부분의 컨트롤 속성들은 DependencyProperty 입니다.
+- [x] Xaml 영역에서 접근이 가능한 대부분의 컨트롤 속성들은 DependencyProperty 입니다.
 - [x] DependencyProperty 속성을 등록은 static 생성자에서 하는 것이 일반적입니다.
-- [ ] 새로운 속성을 DependencyProperty를 통해 등록하기 위해서는 특별한 속성 래퍼(Wrapper) 선언이 필요합니다.
+- [x] 새로운 속성을 DependencyProperty를 통해 등록하기 위해서는 특별한 속성 래퍼(Wrapper) 선언이 필요합니다.
 - [x] WPF에서의 Value Binding은 오직 DependencyProperty를 통해 선언 된 속성만이 가능합니다.
 - [x] DependencyProperty 속성은 기본적으로 상위(부모)로 부터 값을 물려받을 수 있습니다.
-- [ ] Element Binding 대상과 타겟 속성 모두 반드시 DependencyProperty  가능합니다.
+- [x] Element Binding 대상과 타겟 속성 모두 반드시 DependencyProperty  가능합니다.
 - [x] WPF는 DependencyProperty 고유의 의존 속성 기능 덕분에 속성 선언의 양을 엄청나게 많이 줄일 수 있게 되었습니다.
 - [x] DependencyProperty 클래스는 public set 속성이 단 하나도 존재하지 않습니다.
 - [x] DependencyProperty 클래스는 public 생성자가 없기 때문에 인스턴스를 생성할 수가 없습니다.
@@ -71,7 +71,9 @@ namespace System.Windows
 - [x] static Register메서드는 총 3개의 Override 파라메터 형태를 제공합니다.
 - [x] DependencyProperty는 2개의 재정의 된 Override 메서드가 존재합니다. (GetHashCode(), ToString())
 - [x] 사실 DependencyProperty 속성의 .ToString() 값은 일반 속성과 다를 바가 없습니다.
-- [ ] DependencyProperty 속성은 INotifyPropertyChanged 방식보다 복잡하지만 대신 더욱 더 강력합니다.
+- [x] DependencyProperty 속성은 INotifyPropertyChanged 방식보다 복잡하지만 대신 더욱 더 강력합니다.
+- [x] DependencyProperty 공부 순서는 늦으면 늦을수록 좋습니다.
+- [x] Winform에서는 DependencyProperty가 존재하지 않습니다.
 
 
 ## 2. Declaration
