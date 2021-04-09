@@ -14,7 +14,7 @@ In the following pages, you’ll take a close look at dependency properties. You
 defined, registered, and consumed. You’ll also learn what features they support and what problems they
 solve.
 
-■ Note Understanding dependency properties requires a heavy dose of theory, which you might not want to slog
+> ■ Note Understanding dependency properties requires a heavy dose of theory, which you might not want to slog
 through just yet. If you can’t wait to get started building an application, feel free to skip ahead to the following
 chapters and then return to this one when you need a deeper understanding of how WPF ticks and you want to build
 dependency properties of your own.
@@ -50,7 +50,7 @@ want to add data binding, animation, or another WPF feature to a portion of code
 support it. Creating a dependency property isn’t difficult, but the syntax takes a little getting used to. It’s
 thoroughly different from creating an ordinary .NET property.
 
-■ Note You can add dependency properties only to dependency objects—classes that derive from
+> ■ Note You can add dependency properties only to dependency objects—classes that derive from
 DependencyObject. Fortunately, most of the key pieces of WPF infrastructure derive indirectly from
 DependencyObject, with the most obvious example being elements.
 
@@ -63,7 +63,8 @@ Unsurprisingly, Margin is a dependency property. That means it’s defined in th
 
 like this:
 
-```public class FrameworkElement: UIElement, ...
+```csharp
+public class FrameworkElement: UIElement, ...
 {
  public static readonly DependencyProperty MarginProperty;
  ...
@@ -86,7 +87,7 @@ members are read-only. Instead, their values must be supplied as arguments to th
 The following code shows an example of how a DependencyProperty must be created. Here, the
 FrameworkElement class uses a static constructor to initialize the MarginProperty:
 
-```
+```csharp
 static FrameworkElement()
 {
  FrameworkPropertyMetadata metadata = new FrameworkPropertyMetadata(
@@ -103,19 +104,23 @@ FrameworkPropertyMetadata object that indicates what services you want to use wi
 property (such as support for data binding, animation, and journaling). Next, you register the property by
 calling the static DependencyProperty.Register() method. At this point, you are responsible for supplying a
 few key ingredients:
+
 •  The property name (Margin in this example)
 •  The data type used by the property (the Thickness structure in this example)
 •  The type that owns this property (the FrameworkElement class in this example)
 •  Optionally, a FrameworkPropertyMetadata object with additional property settings
 •  Optionally, a callback that performs validation for the property
+
 The first three details are all straightforward. The FrameworkPropertyMetadata object and the
 validation callback are more interesting.
+
 You use FrameworkPropertyMetadata to configure additional features for your dependency property.
 Most of the properties of the FrameworkPropertyMetadata class are simple Boolean flags that you set to
 flip on a feature. (The default value for each Boolean flag is false.) A few are callbacks that point to custom
 methods that you create to perform a specific task. One—FrameworkPropertyMetadata.DefaultValue—
 sets the default value that WPF will apply when the property is first initialized. Table 4-1 lists all the
 FrameworkPropertyMetadata properties.
+
 Table 4-1. Properties of the FrameworkPropertyMetadata Class
 Name Description
 AffectsArrange, AffectsMeasure,
