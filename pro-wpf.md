@@ -32,12 +32,6 @@ property as a normal property (defined in the typical .NET fashion) with a set o
 Conceptually, dependency features behave this way, but that’s not how they’re implemented behind the
 scenes. The simple reason is performance. If the designers of WPF simply added extra features on top of
 the .NET property system, they’d need to create a complex, bulky layer for your code to travel through.
-www.it-ebooks.info
-
-## Chapter 4 ■ Dependency Properties
-
-94
-
 Ordinary properties could not support all the features of dependency properties without this extra
 overhead.
 
