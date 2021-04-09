@@ -13,11 +13,14 @@ and set dependency properties in code in exactly the same way as traditional .NE
 In the following pages, you’ll take a close look at dependency properties. You’ll see how they’re
 defined, registered, and consumed. You’ll also learn what features they support and what problems they
 solve.
+
 ■ Note Understanding dependency properties requires a heavy dose of theory, which you might not want to slog
 through just yet. If you can’t wait to get started building an application, feel free to skip ahead to the following
 chapters and then return to this one when you need a deeper understanding of how WPF ticks and you want to build
 dependency properties of your own.
-Understanding Dependency Properties
+
+## Understanding Dependency Properties
+
 Dependency properties are a new implementation of standard .NET properties—one that has a significant
 amount of added value. You need dependency properties to plug into core WPF features such as
 animation, data binding, and styles.Most of the properties that are exposed by WPF elements are
@@ -30,37 +33,49 @@ Conceptually, dependency features behave this way, but that’s not how they’r
 scenes. The simple reason is performance. If the designers of WPF simply added extra features on top of
 the .NET property system, they’d need to create a complex, bulky layer for your code to travel through.
 www.it-ebooks.info
-Chapter 4 ■ Dependency Properties
+
+## Chapter 4 ■ Dependency Properties
+
 94
+
 Ordinary properties could not support all the features of dependency properties without this extra
 overhead.
+
 Dependency properties are a WPF-specific creation. However, the dependency properties in the WPF
 libraries are always wrapped by ordinary .NET property procedures. This makes them usable in the normal
 way, even with code that has no understanding of the WPF dependency property system. It seems odd to
 think of an older technology wrapping a newer one, but that’s how WPF is able to change a fundamental
 ingredient such as properties without disrupting the rest of the .NET world.
-Defining a Dependency Property
+
+## Defining a Dependency Property
+
 You’ll spend much more time using dependency properties than creating them. However, there are still
 many reasons that you’ll need to create your own dependency properties. Obviously, they’re a key
 ingredient if you’re designing a custom WPF element. However, they’re also required in some cases if you
 want to add data binding, animation, or another WPF feature to a portion of code that wouldn’t otherwise
 support it. Creating a dependency property isn’t difficult, but the syntax takes a little getting used to. It’s
 thoroughly different from creating an ordinary .NET property.
+
 ■ Note You can add dependency properties only to dependency objects—classes that derive from
 DependencyObject. Fortunately, most of the key pieces of WPF infrastructure derive indirectly from
 DependencyObject, with the most obvious example being elements.
+
 The first step is to define an object that represents your property. This is an instance of the
 DependencyProperty class. The information about your property needs to be available all the time, and
 possibly even shared among classes (as is common with WPF elements). For that reason, your
 DependencyProperty object must be defined as a static field in the associated class.
 For example, the FrameworkElement class defines a Margin property that all elements share.
 Unsurprisingly, Margin is a dependency property. That means it’s defined in the FrameworkElement class
+
 like this:
-public class FrameworkElement: UIElement, ...
+
+```public class FrameworkElement: UIElement, ...
 {
  public static readonly DependencyProperty MarginProperty;
  ...
 }
+```
+
 By convention, the field that defines a dependency property has the name of the ordinary property,
 plus the word Property at the end. That way, you can separate the dependency property definition from the
 name of the actual property. The field is defined with the readonly keyword, which means it can be set only
@@ -71,14 +86,13 @@ your dependency property with WPF. This step needs to be completed before any co
 so it must be performed in a static constructor for the associated class.
 WPF ensures that DependencyProperty objects can’t be instantiated directly, because the
 DependencyProperty class has no public constructor. Instead, a DependencyObject instance can be
-www.it-ebooks.info
-95
-Chapter 4 ■ Dependency Properties
 created only by using the static DependencyProperty.Register() method. WPF also ensures that
 DependencyProperty objects can’t be changed after they’re created, because all DependencyProperty
 members are read-only. Instead, their values must be supplied as arguments to the Register() method.
 The following code shows an example of how a DependencyProperty must be created. Here, the
 FrameworkElement class uses a static constructor to initialize the MarginProperty:
+
+```
 static FrameworkElement()
 {
  FrameworkPropertyMetadata metadata = new FrameworkPropertyMetadata(
@@ -88,6 +102,8 @@ static FrameworkElement()
  new ValidateValueCallback(FrameworkElement.IsMarginValid));
  ...
 }
+```
+
 There are two steps involved in registering a dependency property. First, you create a
 FrameworkPropertyMetadata object that indicates what services you want to use with your dependency
 property (such as support for data binding, animation, and journaling). Next, you register the property by
