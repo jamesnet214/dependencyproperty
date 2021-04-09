@@ -63,7 +63,7 @@ namespace System.Windows
 - [x] DependencyProperty 속성은 기본적으로 상위(부모)로 부터 값을 물려받을 수 있습니다.
 - [ ] Element Binding 대상과 타겟 속성 모두 반드시 DependencyProperty  가능합니다.
 - [x] WPF는 DependencyProperty 고유의 의존 속성 기능 덕분에 속성 선언의 양을 엄청나게 많이 줄일 수 있게 되었습니다.
-- [x] DependencyProperty 클래스는 public set 메서드가 단 하나도 존재하지 않습니다.
+- [x] DependencyProperty 클래스는 public set 속성이 단 하나도 존재하지 않습니다.
 - [x] DependencyProperty 클래스는 public 생성자가 없기 때문에 인스턴스를 생성할 수가 없습니다.
 - [x] DependencyProperty 클래스는 sealed 한정자로부터 보호받고 있기 때문에 클래스 상속이 불가능합니다.
 - [x] DependencyProperty는 WPF .NET Framework에서 가장 많이 선언되어있는 클래스입니다.
