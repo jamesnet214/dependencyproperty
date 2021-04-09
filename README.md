@@ -58,7 +58,7 @@ namespace System.Windows
 - [x] DependencyProperty 클래스는 public 생성자가 없기 때문에 인스턴스를 생성할 수가 없습니다.
 - [x] DependencyProperty 클래스는 sealed 한정자로부터 보호받고 있기 때문에 클래스 상속이 불가능합니다.
 - [x] DependencyProperty는 WPF .NET Framework에서 가장 많이 선언되어있는 클래스입니다.
-- [x] CoerceValueCallback 이벤트를 통해 관련 값을 강제로 변환되도록 처리할 수 있습니다. 
+- [x] CoerceValueCallback 이벤트를 통해 관련 값을 강제로 변환하도록 호출할 수 있습니다.
 
 
 ## 2. Declaration
