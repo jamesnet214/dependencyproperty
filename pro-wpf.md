@@ -1,13 +1,15 @@
-Dependency Properties
+# Dependency Properties
 Every .NET programmer is familiar with properties and events, which are core parts of .NET’s object
 abstraction. Few would expect WPF, a user interface technology, to change either of these fundamentals.
 But surprisingly enough, that’s exactly what WPF does.
+
 In this chapter, you’ll learn how WPF replaces ordinary .NET properties with a higher-level dependency
 property feature. Dependency properties use more-efficient storage and support additional features such
 as change notification and property value inheritance (the ability to propagate default values down the
 element tree). Dependency properties are also the basis for a number of key WPF features, including
 animation, data binding, and styles. Fortunately, even though the plumbing has changed, you can read
 and set dependency properties in code in exactly the same way as traditional .NET properties.
+
 In the following pages, you’ll take a close look at dependency properties. You’ll see how they’re
 defined, registered, and consumed. You’ll also learn what features they support and what problems they
 solve.
