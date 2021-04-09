@@ -54,6 +54,9 @@ namespace System.Windows
     }   
 }
 ```
+## Did You Know That?
+- [x] DependencyProperty 클래스는 public 생성자가 없습니다.
+
 
 ## 2. Declaration
 DependencyProperty can be registered in two ways.
