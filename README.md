@@ -75,8 +75,10 @@ namespace System.Windows
 - [x] DependencyProperty는 충분히 WPF를 경험하고 배우는 것이 바람직합니다.
 - [x] Winform에서는 DependencyProperty가 존재하지 않습니다.
 
+## DependencyProperty는 일반 속성처럼 사용 가능합니다.
 
-## 2. Declaration
+
+## Declaration
 DependencyProperty can be registered in two ways.
 - [Standard](#21-Standard)
 - [Extender](#22-Extender)
