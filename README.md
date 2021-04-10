@@ -75,13 +75,6 @@ namespace System.Windows
 - [x] DependencyProperty는 충분히 WPF를 경험하고 배우는 것이 바람직합니다.
 - [x] Winform에서는 DependencyProperty가 존재하지 않습니다.
 
-### DependencyProperty 사용 방법
-DpendencyProperty는 일반 속성과 동일한 사용이 가능합니다.
-```xaml
-<TextBox Text="James"/>
-```
-
-
 ## Declaration
 DependencyProperty can be registered in two ways.
 - [Standard](#21-Standard)
