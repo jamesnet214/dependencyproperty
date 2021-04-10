@@ -64,7 +64,6 @@ Button btn = new Button();
 btn.Content = "James";
 btn.Width = 100;
 btn.Height = 50;
-
 double width = btn.Width;
 double height = btn.Height;
 string Content = btn.Content.ToString();
