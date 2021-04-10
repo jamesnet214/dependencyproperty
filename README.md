@@ -22,10 +22,10 @@ Most importantly, there is a full foundation for data binding. You can also send
 The MVVM development methodology already has a limited set of DependencyProperty provided by the .Net Framework, so this technology is essential to more aggressive use of Binding.
 
 
-## 1. Overview
+## Overview
 DependencyProperty is one of the key design elements of the WPF. This involves a combination of concepts and logical structures rather than a single function, requiring in-depth research and a somewhat higher degree of difficulty in the scope and depth of the technology.
 
-#### 1.1. Class Version 
+#### Class Version 
 The first target version of DependencyProperty is based on .NET Framework `3.0`
 
 | Target Name    | Version                                                                                  |
@@ -37,7 +37,7 @@ The first target version of DependencyProperty is based on .NET Framework `3.0`
 ##### _So, .NET Framework 2.0 doesn't allow us to use DependencyProperty?_   
 > That's right. WPF starts at 3.0. :smile:
 
-#### 1.2. Class Information
+#### Class Information
 | Assembly             | Namespace                   | Class Access        | Base Class      |
 |:---------------------|:----------------------------|:--------------------|:----------------|
 | WindowsBase.dll      | System.Windows              | `sealed`            | `Object`        |
@@ -56,6 +56,10 @@ namespace System.Windows
 ```
 ## Did You Know That?
 - [x] DependencyProperty 속성은 일반적인 속성처럼 사용도 가능합니다.
+  ```csharp
+  btn.Content = "James";
+  btn.Content = new Binding("Elena");
+  ```
 - [x] Xaml 영역에서 접근이 가능한 대부분의 컨트롤 속성들은 DependencyProperty 입니다.
 - [x] DependencyProperty 속성을 등록은 static 생성자에서 하는 것이 일반적입니다.
 - [x] 새로운 속성을 DependencyProperty를 통해 등록하기 위해서는 특별한 속성 래퍼(Wrapper) 선언이 필요합니다.
@@ -74,6 +78,7 @@ namespace System.Windows
 - [x] DependencyProperty 속성은 INotifyPropertyChanged 방식보다 복잡하지만 대신 더욱 더 강력합니다.
 - [x] DependencyProperty는 충분히 WPF를 경험하고 배우는 것이 바람직합니다.
 - [x] Winform에서는 DependencyProperty가 존재하지 않습니다.
+
 
 ## Declaration
 DependencyProperty can be registered in two ways.
