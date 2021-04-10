@@ -56,7 +56,7 @@ namespace System.Windows
 ```
 ## Understanding DependencyProperty
 
-### 속성
+### Using Property
 DependencyProperty 속성은 기본적으로 일반 속성처럼 사용할 수 있습니다. 또 그렇게 큰 차이도 없어 보입니다.
 ```csharp
 Button btn = new Button();
