@@ -69,7 +69,7 @@ double width = btn.Width;
 double height = btn.Height;
 string Content = btn.Content.ToString();
 ```
-Xaml 영역에서는 구조의 특성상 Get을 사용할 수는 없지만 set은 마찬가지로 기본 속성처럼 자유롭게 사용할 수 있습니다.
+Xaml 영역에서는 구조의 특성상 get을 사용할 수는 없지만 set은 마찬가지로 기본 속성처럼 자유롭게 사용할 수 있습니다.
 ```xaml
 <Button Content="Elena" Width="100" Height="50"/>
 ```
