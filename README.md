@@ -58,14 +58,18 @@ namespace System.Windows
 - [Using Property](#using-property)
 
 ### Using Property
-DependencyProperty 속성은 기본적으로 일반 속성처럼 사용이 가능하기 때문에
+DependencyProperty 속성은 기본적으로 일반 속성처럼 사용이 가능하기 때문에 `get`과 `set`을 자유롭게 사용할 수 있습니다.
 ```csharp
 Button btn = new Button();
 btn.Content = "James";
 btn.Width = 100;
 btn.Height = 50;
+
+double width = btn.Width;
+double height = btn.Height;
+string Content = btn.Content.ToString();
 ```
-Xaml 영역에서 사용하는 것도 마찬가지입니다.   
+Xaml 디자인 영역에서의 사용도 크게 다르지 않습니다.
 ```xaml
 <Button Content="Elena" Width="100" Height="50"/>
 ```
