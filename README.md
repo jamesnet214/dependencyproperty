@@ -55,8 +55,8 @@ namespace System.Windows
 }
 ```
 ## Did You Know That?
-- [x] DependencyProperty 속성
-DependencyProperty 속성은 일반적인 속성처럼 사용이 가능합니다.
+### DependencyProperty 속성
+- [x] DependencyProperty 속성은 일반적인 속성처럼 사용이 가능합니다.
 
 _Code Behind_
 ```csharp
