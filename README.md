@@ -55,7 +55,20 @@ namespace System.Windows
 }
 ```
 ## Understanding DependencyProperty
+- [OverrideMetadata](#overridemetadata)
 - [Using Property](#using-property)
+
+### OverrideMetadata Method
+OverrideMetadata()는 DependencyProperty의 `public` 메서드입니다. 이 메서드는 주로 컨트롤(클래스)의 `Default` 값 또는 ChangedCallback, CoerceValueCallback 방식을 다시 한번 재정의 할 수 있는 기능을 제공합니다.
+```csharp
+public class Pizza : Control
+{
+    static Pizza()
+    {
+        DefaultStyleKeyProperty.OverrideMetadata(typeof(Pizza), new PropertyMetadata(typeof(Pizza));
+    }
+}
+```
 
 ### Using Property
 DependencyProperty 속성은 기본적으로 일반 속성처럼 사용이 가능합니다. 따라서 아래와 같이 `get`, `set`을 자유롭게 사용할 수 있습니다.
@@ -75,9 +88,10 @@ Xaml 영역에서는 구조의 특성상 get을 사용할 수는 없지만 set�
 
 
 ## Did You Know That?
-- [x] DependencyProperty 속성은 일반적인 속성처럼 사용이 가능합니다.
+- [x] DependencyProperty 속성은 일반적인 속성처럼 사용이 가능합니다. [확인](#using-property)
 - [x] Xaml 영역에서 접근이 가능한 대부분의 컨트롤 속성들은 DependencyProperty 입니다.
-- [x] DependencyProperty 속성을 등록은 static 생성자에서 하는 것이 일반적입니다.
+- [ ] OverrideMetadata 재정의는 일반적으로 static 생성자에서 하는 것이 좋습니다.  [확인](#overrideMetadata)
+- [x] DependencyProperty 속성 등록은 static 생성자에서 하는 것이 일반적입니다.
 - [x] 새로운 속성을 DependencyProperty를 통해 등록하기 위해서는 특별한 속성 래퍼(Wrapper) 선언이 필요합니다.
 - [x] WPF에서의 Value Binding은 오직 DependencyProperty를 통해 선언 된 속성만이 가능합니다.
 - [x] DependencyProperty 속성은 기본적으로 상위(부모)로 부터 값을 물려받을 수 있습니다.
