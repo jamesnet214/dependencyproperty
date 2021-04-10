@@ -59,7 +59,7 @@ namespace System.Windows
 - [Using Property](#using-property)
 
 ### OverrideMetadata Method
-OverrideMetadata()는 DependencyProperty의 `public` 메서드입니다. 이 메서드는 주로 컨트롤(클래스)의 `Default` 값 또는 ChangedCallback, CoerceValueCallback 방식을 다시 한번 재정의 할 수 있는 기능을 제공합니다.
+OverrideMetadata는 컨트롤(클래스)의 `Default` 값이나 ChangedCallback, CoerceValueCallback 방식을 재정의 할 수 있도록 하는 기능을 제공합니다. Metadata는 이미 DependencyProperty를 등록(Register)할 때 정의 하지만 이 메서드를 통해 다시 정의할 수 있기 때문에 CoerceValueCallback에 의해 내부적으로 처리되는 콜백 시스템을 재구성할 수 있습니다.
 ```csharp
 public class Pizza : Control
 {
