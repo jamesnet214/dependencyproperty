@@ -58,7 +58,8 @@ namespace System.Windows
 - [Using Property](#using-property)
 
 ### Using Property
-> DependencyProperty 속성은 기본적으로 일반 속성처럼 사용이 가능합니다.
+> DependencyProperty 속성은 기본적으로 일반 속성처럼 사용이 가능합니다.   
+> 
 `.cs`
 ```csharp
 Button btn = new Button();
