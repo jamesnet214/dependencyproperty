@@ -58,7 +58,7 @@ namespace System.Windows
 - [OverrideMetadata](#overridemetadata)
 - [Using Property](#using-property)
 
-### OverrideMetadata Method
+## OverrideMetadata Method
 OverrideMetadata는 컨트롤(클래스)의 `Default` 값이나 ChangedCallback, CoerceValueCallback 방식을 재정의 할 수 있도록 하는 기능을 제공합니다. Metadata는 이미 DependencyProperty를 등록(Register)할 때 정의 하지만 이 메서드를 통해 다시 정의할 수 있기 때문에 CoerceValueCallback에 의해 내부적으로 처리되는 콜백 시스템을 재구성할 수 있습니다.
 ```csharp
 public class Pizza : Control
@@ -70,7 +70,7 @@ public class Pizza : Control
 }
 ```
 
-### Using Property
+## Using Property
 DependencyProperty 속성은 기본적으로 일반 속성처럼 사용이 가능합니다. 따라서 아래와 같이 `get`, `set`을 자유롭게 사용할 수 있습니다.
 ```csharp
 Button btn = new Button();
