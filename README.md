@@ -56,10 +56,15 @@ namespace System.Windows
 ```
 ## Did You Know That?
 - [x] DependencyProperty 속성은 일반적인 속성처럼 사용도 가능합니다.
-  ```csharp
-  btn.Content = "James";
-  btn.Content = new Binding("Elena");
-  ```
+  
+```csharp
+btn.Content = "James";
+btn.Content = new Binding("James");
+```
+```xaml
+<Button Content="Elena"/>
+<Button Content="{Binding Elena}"/>
+```
 - [x] Xaml 영역에서 접근이 가능한 대부분의 컨트롤 속성들은 DependencyProperty 입니다.
 - [x] DependencyProperty 속성을 등록은 static 생성자에서 하는 것이 일반적입니다.
 - [x] 새로운 속성을 DependencyProperty를 통해 등록하기 위해서는 특별한 속성 래퍼(Wrapper) 선언이 필요합니다.
