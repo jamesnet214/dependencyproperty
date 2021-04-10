@@ -57,17 +57,18 @@ namespace System.Windows
 ## Understanding DependencyProperty
 
 ### Using Property
-DependencyProperty 속성은 기본적으로 일반 속성처럼 사용할 수 있습니다. 또 그렇게 큰 차이도 없어 보입니다.
+DependencyProperty 속성은 기본적으로 일반 속성처럼 사용할 수 있습니다.
+어떻게 사용하는지 소스코드를 한번 볼까요?
 ```csharp
 Button btn = new Button();
 btn.Content = "James";
 btn.Width = 100;
 btn.Height = 50;
 ```
+XAML에서도 별반 다르지 않습니다.
 _Xaml_
 ```xaml
-<Button Content="Elena"/>
-<Button Content="{Binding Elena}"/>
+<Button Content="Elena" Width="100" Height="50"/>
 ```
 
 
