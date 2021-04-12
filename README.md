@@ -128,12 +128,12 @@ DependencyProperty can be registered in two ways.
 Standard method is to connect(register) directly to the `Owner UI` class through the `DependencyProperty.Register` method.
 - [Int](#standard-int)
 - [Boolean](#standard-boolean)
-- [String](#string-type)
-- [Object](#object-type)
-- [Geometry](#geometry-type)
-- [Brush](#brush-type)
-- [Double](#double-type)
-- [ICommand](#icommand-type)
+- [String](#standard-string)
+- [Object](#standard-object)
+- [Geometry](#standard-geometry)
+- [Brush](#standard-brush)
+- [Double](#standard-double)
+- [ICommand](#standard-icommand)
 
 #### [Standard] Int
 ```csharp
