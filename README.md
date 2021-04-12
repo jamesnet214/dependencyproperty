@@ -270,7 +270,8 @@ class PasswordExtender
 ```
 <br />
 
-### 3. Property Changed
+### Property Changed
+
 ```csharp
 public string Password
 {
@@ -288,7 +289,8 @@ private static void PasswordPropertyChanged(DependencyObject d, DependencyProper
 ```
 <br />
 
-### 4. CoerceValueCallback
+### CoerceValueCallback
+
 ```csharp
 public string Password
 {
@@ -309,7 +311,6 @@ DependencyProperty.Register(
                 true, 
                 UpdateSourceTrigger.LostFocus 
                 ));
-
 
 private static void OnPasswordPropertyChanged(DependencyObject sender, DependencyPropertyChangedEventArgs args)
 {
@@ -335,13 +336,11 @@ private static void OnPasswordPropertyChanged(DependencyObject sender, Dependenc
 ```
 <br />
 
-<br />
 
-## 6. References
-### 6.1 Community Docs
-#### WPF Tutorial
-> DependencyProperties [here.](https://www.wpftutorial.net/DependencyProperties.html)   
-#### SO Documentation
-> Dependency-Properties [here.](https://sodocumentation.net/wpf/topic/2914/dependency-properties)   
-#### Microsoft Docs
-> DependencyProperty Class [Here.](https://docs.microsoft.com/ko-kr/dotnet/api/system.windows.dependencyproperty?view=netframework-4.8)   
+### References
+#### 📘 WPF Tutorial  
+&nbsp;&nbsp; 🔖 DependencyProperties [here.](https://www.wpftutorial.net/DependencyProperties.html)   
+#### 📘 SO Documentation
+&nbsp;&nbsp; 🔖 Dependency-Properties [here.](https://sodocumentation.net/wpf/topic/2914/dependency-properties)   
+#### 📘 Microsoft Docs
+&nbsp;&nbsp; 🔖 DependencyProperty Class [Here.](https://docs.microsoft.com/ko-kr/dotnet/api/system.windows.dependencyproperty?view=netframework-4.8)   
