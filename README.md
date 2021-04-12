@@ -118,14 +118,6 @@ Xaml 영역에서는 구조의 특성상 get을 사용할 수는 없지만 set�
 ***
 
 ## Declaration
-- [Int](#standard-int)
-- [Boolean](#standard-boolean)
-- [String](#standard-string)
-- [Object](#standard-object)
-- [Geometry](#standard-geometry)
-- [Brush](#standard-brush)
-- [Double](#standard-double)
-- [ICommand](#standard-icommand)
 
 ### Int
 ```csharp
