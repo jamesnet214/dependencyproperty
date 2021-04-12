@@ -62,8 +62,28 @@ namespace System.Windows
 ***
 
 ## Understanding DependencyProperty
-- [OverrideMetadata Method](#overridemetadata-method)
-- [Using Property](#using-property)
+
+- [x] DependencyProperty 속성은 일반적인 속성처럼 사용이 가능합니다. [확인](#using-property)
+- [x] Xaml 영역에서 접근이 가능한 대부분의 컨트롤 속성들은 DependencyProperty 입니다.
+- [ ] OverrideMetadata 재정의는 일반적으로 static 생성자에서 하는 것이 좋습니다.  [확인](#override-metadata)
+- [x] DependencyProperty 속성 등록은 static 생성자에서 하는 것이 일반적입니다.
+- [x] 새로운 속성을 DependencyProperty를 통해 등록하기 위해서는 특별한 속성 래퍼(Wrapper) 선언이 필요합니다.
+- [x] WPF에서의 Value Binding은 오직 DependencyProperty를 통해 선언 된 속성만이 가능합니다.
+- [x] DependencyProperty 속성은 기본적으로 상위(부모)로 부터 값을 물려받을 수 있습니다.
+- [x] Element Binding 대상과 타겟 속성 모두 반드시 DependencyProperty  가능합니다.
+- [x] WPF는 DependencyProperty 고유의 의존 속성 덕분에 속성 값의 양을 엄청나게 줄일 수 있게 되었습니다.
+- [x] DependencyProperty 클래스는 public set 속성이 단 하나도 존재하지 않습니다.
+- [x] DependencyProperty 클래스는 public 생성자가 없기 때문에 인스턴스를 생성할 수가 없습니다.
+- [x] DependencyProperty 클래스는 sealed 한정자로부터 보호받고 있기 때문에 클래스 상속이 불가능합니다.
+- [x] DependencyProperty는 WPF .NET Framework에서 가장 많이 선언되어있는 클래스입니다.
+- [x] CoerceValueCallback 이벤트를 통해 관련 값을 강제로 변환하도록 호출할 수 있습니다.
+- [x] static Register메서드는 총 3개의 Override 파라메터 형태를 제공합니다.
+- [x] DependencyProperty는 2개의 재정의 된 Override 메서드가 존재합니다. `GetHashCode()` `ToString()`
+- [x] 사실 DependencyProperty 속성의 .ToString() 값은 일반 속성과 다를 바가 없습니다.
+- [x] DependencyProperty 속성은 INotifyPropertyChanged 방식보다 복잡하지만 대신 더욱 더 강력합니다.
+- [x] DependencyProperty는 충분히 WPF를 경험하고 배우는 것이 바람직합니다.
+- [x] Winform에서는 DependencyProperty가 존재하지 않습니다.
+<br />
 
 ### OverrideMetadata Method
 OverrideMetadata는 컨트롤(클래스)의 `Default` 값이나 ChangedCallback, CoerceValueCallback 방식을 재정의 할 수 있도록 하는 기능을 제공합니다. Metadata는 이미 DependencyProperty를 등록(Register)할 때 정의 하지만 이 메서드를 통해 다시 정의할 수 있기 때문에 CoerceValueCallback에 의해 내부적으로 처리되는 콜백 시스템을 재구성할 수 있습니다.
@@ -93,39 +113,11 @@ Xaml 영역에서는 구조의 특성상 get을 사용할 수는 없지만 set�
 ```xaml
 <Button Content="Elena" Width="100" Height="50"/>
 ```
-
-
-## Did You Know That?
-- [x] DependencyProperty 속성은 일반적인 속성처럼 사용이 가능합니다. [확인](#using-property)
-- [x] Xaml 영역에서 접근이 가능한 대부분의 컨트롤 속성들은 DependencyProperty 입니다.
-- [ ] OverrideMetadata 재정의는 일반적으로 static 생성자에서 하는 것이 좋습니다.  [확인](#override-metadata)
-- [x] DependencyProperty 속성 등록은 static 생성자에서 하는 것이 일반적입니다.
-- [x] 새로운 속성을 DependencyProperty를 통해 등록하기 위해서는 특별한 속성 래퍼(Wrapper) 선언이 필요합니다.
-- [x] WPF에서의 Value Binding은 오직 DependencyProperty를 통해 선언 된 속성만이 가능합니다.
-- [x] DependencyProperty 속성은 기본적으로 상위(부모)로 부터 값을 물려받을 수 있습니다.
-- [x] Element Binding 대상과 타겟 속성 모두 반드시 DependencyProperty  가능합니다.
-- [x] WPF는 DependencyProperty 고유의 의존 속성 덕분에 속성 값의 양을 엄청나게 줄일 수 있게 되었습니다.
-- [x] DependencyProperty 클래스는 public set 속성이 단 하나도 존재하지 않습니다.
-- [x] DependencyProperty 클래스는 public 생성자가 없기 때문에 인스턴스를 생성할 수가 없습니다.
-- [x] DependencyProperty 클래스는 sealed 한정자로부터 보호받고 있기 때문에 클래스 상속이 불가능합니다.
-- [x] DependencyProperty는 WPF .NET Framework에서 가장 많이 선언되어있는 클래스입니다.
-- [x] CoerceValueCallback 이벤트를 통해 관련 값을 강제로 변환하도록 호출할 수 있습니다.
-- [x] static Register메서드는 총 3개의 Override 파라메터 형태를 제공합니다.
-- [x] DependencyProperty는 2개의 재정의 된 Override 메서드가 존재합니다. `GetHashCode()` `ToString()`
-- [x] 사실 DependencyProperty 속성의 .ToString() 값은 일반 속성과 다를 바가 없습니다.
-- [x] DependencyProperty 속성은 INotifyPropertyChanged 방식보다 복잡하지만 대신 더욱 더 강력합니다.
-- [x] DependencyProperty는 충분히 WPF를 경험하고 배우는 것이 바람직합니다.
-- [x] Winform에서는 DependencyProperty가 존재하지 않습니다.
 <br />
 
 ***
-## Declaration
-DependencyProperty can be registered in two ways.
-- [Standard](#standard)
-- [Extender](#extender)
 
-### Standard
-Standard method is to connect(register) directly to the `Owner UI` class through the `DependencyProperty.Register` method.
+## Declaration
 - [Int](#standard-int)
 - [Boolean](#standard-boolean)
 - [String](#standard-string)
@@ -135,7 +127,7 @@ Standard method is to connect(register) directly to the `Owner UI` class through
 - [Double](#standard-double)
 - [ICommand](#standard-icommand)
 
-#### [Standard] Int
+### Int
 ```csharp
 public static readonly DependencyProperty AgeProperty = DependencyProperty.Register(
     "Age", typeof(int), typeof(<class>), new PropertyMetadata(0));
@@ -147,7 +139,7 @@ public int Age
 }
 ```
  
-#### [Standard] Boolean
+### Boolean
 ```csharp
 public static readonly DependencyProperty IsUsedProperty = DependencyProperty.Register(
     "IsUsed", typeof(bool), typeof(<class>), new PropertyMetadata(false));
@@ -159,7 +151,7 @@ public bool IsUsed
 }
 ```
 
-#### [Standard] String
+### String(Standard)
 ```csharp
 public static readonly DependencyProperty PlaceHolderProperty = DependencyProperty.Register(
     "PlaceHolder", typeof(string), typeof(<class>), new PropertyMetadata(""));
@@ -171,80 +163,7 @@ public string PlaceHolder
 }
 ```
 
-#### [Standard] Object
-
-It is actually the same as the Content Property included in the `ContentControl` class.  
-If you inherit ContentControl and create a control that defines ContentPresenter, use Object-type DependencyProperty.
-
-```csharp
-public static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
-    "Content", typeof(object), typeof(<class>), new PropertyMetadata(""));
-    
-public object Content
-{
-    get { return (object)this.GetValue(ContentProperty); }
-    set { this.SetValue(ContentProperty, value); }
-}
-```
-
- #### ✔️ Properties
- - **`Content`** in `ContentControl` _(Button, CheckBox, UserControl, Window ···)_  
- - **`Tag`** in `Control` _(Button, Window, Grid, StackPanel ···)_
-
-#### [Standard] Geometry
-```csharp
-public static readonly DependencyProperty DataProperty = DependencyProperty.Register(
-    "Data", typeof(Geometry), typeof(<class>), new PropertyMetadata(null));
-    
-public Geometry Data
-{
-    get { return (Geometry)this.GetValue(DataProperty); }
-    set { this.SetValue(DataProperty, value); }
-}
-```
-
- #### ✔️ Properties
- - **`Data`** in `Path`
-
-#### [Standard] Brush
-```csharp
-public static readonly DependencyProperty FillProperty = DependencyProperty.Register(
-    "Fill", typeof(Brush), typeof(<class>), new PropertyMetadata(null));
-    
-public Brush Fill
-{
-    get { return (Brush)this.GetValue(FillProperty); }
-    set { this.SetValue(FillProperty, value); }
-}
-```
-
-#### [Standard] Double
-```csharp
-public static readonly DependencyProperty IconWidthProperty = DependencyProperty.Register(
-    "IconWidth", typeof(double), typeof(<class>), new PropertyMetadata(0));
-    
-public double IconWidth
-{
-    get { return (double)this.GetValue(IconWidthProperty); }
-    set { this.SetValue(IconWidthProperty, value); }
-}
-```
-
-#### [Standard] ICommand
-```csharp
-public static readonly DependencyProperty SelectionCommandProperty = DependencyProperty.Register(
-    "SelectionCommand", typeof(ICommand), typeof(<class>));
-    
-public ICommand SelectionCommand
-{
-    get { return (ICommand)this.GetValue(SelectionCommandProperty); }
-    set { this.SetValue(SelectionCommandProperty, value); }
-}
-```
-<br />
-
-### Extender
-#### [Extender] String
+### String(Extender)
 ```csharp
 class PasswordExtender
 {
@@ -268,7 +187,77 @@ class PasswordExtender
     }
 }
 ```
-<br />
+
+### Object
+
+It is actually the same as the Content Property included in the `ContentControl` class.  
+If you inherit ContentControl and create a control that defines ContentPresenter, use Object-type DependencyProperty.
+
+```csharp
+public static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
+    "Content", typeof(object), typeof(<class>), new PropertyMetadata(""));
+    
+public object Content
+{
+    get { return (object)this.GetValue(ContentProperty); }
+    set { this.SetValue(ContentProperty, value); }
+}
+```
+
+ #### ✔️ Properties
+ - **`Content`** in `ContentControl` _(Button, CheckBox, UserControl, Window ···)_  
+ - **`Tag`** in `Control` _(Button, Window, Grid, StackPanel ···)_
+
+### Geometry
+```csharp
+public static readonly DependencyProperty DataProperty = DependencyProperty.Register(
+    "Data", typeof(Geometry), typeof(<class>), new PropertyMetadata(null));
+    
+public Geometry Data
+{
+    get { return (Geometry)this.GetValue(DataProperty); }
+    set { this.SetValue(DataProperty, value); }
+}
+```
+
+ #### ✔️ Properties
+ - **`Data`** in `Path`
+
+### Brush
+```csharp
+public static readonly DependencyProperty FillProperty = DependencyProperty.Register(
+    "Fill", typeof(Brush), typeof(<class>), new PropertyMetadata(null));
+    
+public Brush Fill
+{
+    get { return (Brush)this.GetValue(FillProperty); }
+    set { this.SetValue(FillProperty, value); }
+}
+```
+
+### Double
+```csharp
+public static readonly DependencyProperty IconWidthProperty = DependencyProperty.Register(
+    "IconWidth", typeof(double), typeof(<class>), new PropertyMetadata(0));
+    
+public double IconWidth
+{
+    get { return (double)this.GetValue(IconWidthProperty); }
+    set { this.SetValue(IconWidthProperty, value); }
+}
+```
+
+### ICommand
+```csharp
+public static readonly DependencyProperty SelectionCommandProperty = DependencyProperty.Register(
+    "SelectionCommand", typeof(ICommand), typeof(<class>));
+    
+public ICommand SelectionCommand
+{
+    get { return (ICommand)this.GetValue(SelectionCommandProperty); }
+    set { this.SetValue(SelectionCommandProperty, value); }
+}
+```
 
 ### Property Changed
 
@@ -287,7 +276,6 @@ private static void PasswordPropertyChanged(DependencyObject d, DependencyProper
     
 }
 ```
-<br />
 
 ### CoerceValueCallback
 
