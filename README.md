@@ -57,6 +57,7 @@ namespace System.Windows
     }   
 }
 ```
+<br />
 
 ***
 
@@ -66,6 +67,7 @@ namespace System.Windows
 
 ### OverrideMetadata Method
 OverrideMetadata는 컨트롤(클래스)의 `Default` 값이나 ChangedCallback, CoerceValueCallback 방식을 재정의 할 수 있도록 하는 기능을 제공합니다. Metadata는 이미 DependencyProperty를 등록(Register)할 때 정의 하지만 이 메서드를 통해 다시 정의할 수 있기 때문에 CoerceValueCallback에 의해 내부적으로 처리되는 콜백 시스템을 재구성할 수 있습니다.
+
 ```csharp
 public class Pizza : Control
 {
@@ -145,12 +147,11 @@ public int Age
 }
 ```
  
-#### 2.1.2. [Standard] Boolean
+#### [Standard] Boolean
 ```csharp
 public static readonly DependencyProperty IsUsedProperty = DependencyProperty.Register(
     "IsUsed", typeof(bool), typeof(<class>), new PropertyMetadata(false));
-```
-```csharp
+    
 public bool IsUsed 
 { 
     get { return (bool)this.GetValue(IsUsedProperty); }
@@ -158,12 +159,11 @@ public bool IsUsed
 }
 ```
 
-#### 2.1.3. [Standard] String
+#### [Standard] String
 ```csharp
 public static readonly DependencyProperty PlaceHolderProperty = DependencyProperty.Register(
     "PlaceHolder", typeof(string), typeof(<class>), new PropertyMetadata(""));
-```
-```csharp
+    
 public string PlaceHolder
 {
     get { return (string)this.GetValue(PlaceHolderProperty); }
@@ -171,7 +171,7 @@ public string PlaceHolder
 }
 ```
 
-#### 2.1.4. [Standard] Object
+#### [Standard] Object
 
 It is actually the same as the Content Property included in the `ContentControl` class.  
 If you inherit ContentControl and create a control that defines ContentPresenter, use Object-type DependencyProperty.
@@ -179,39 +179,38 @@ If you inherit ContentControl and create a control that defines ContentPresenter
 ```csharp
 public static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
     "Content", typeof(object), typeof(<class>), new PropertyMetadata(""));
-```
-```csharp
+    
 public object Content
 {
     get { return (object)this.GetValue(ContentProperty); }
     set { this.SetValue(ContentProperty, value); }
 }
 ```
-#### Exists Properties
-- Content in `ContentControl` (Button, CheckBox, UserControl, Window ···)   
-- Tag in `Control` (Button, Window, Grid, StackPanel ···)
 
-#### 2.1.5. [Standard] Geometry
+ #### ✔️ Properties
+ - **`Content`** in `ContentControl` _(Button, CheckBox, UserControl, Window ···)_  
+ - **`Tag`** in `Control` _(Button, Window, Grid, StackPanel ···)_
+
+#### [Standard] Geometry
 ```csharp
 public static readonly DependencyProperty DataProperty = DependencyProperty.Register(
     "Data", typeof(Geometry), typeof(<class>), new PropertyMetadata(null));
-```
-```csharp
+    
 public Geometry Data
 {
     get { return (Geometry)this.GetValue(DataProperty); }
     set { this.SetValue(DataProperty, value); }
 }
 ```
-#### Exists Properties
-- Data in `Path`
 
-#### 2.1.6. [Standard] Brush
+ #### ✔️ Properties
+ - **`Data`** in `Path`
+
+#### [Standard] Brush
 ```csharp
 public static readonly DependencyProperty FillProperty = DependencyProperty.Register(
     "Fill", typeof(Brush), typeof(<class>), new PropertyMetadata(null));
-```
-```csharp
+    
 public Brush Fill
 {
     get { return (Brush)this.GetValue(FillProperty); }
@@ -219,13 +218,11 @@ public Brush Fill
 }
 ```
 
-
-#### 2.1.7. [Standard] Double
+#### [Standard] Double
 ```csharp
 public static readonly DependencyProperty IconWidthProperty = DependencyProperty.Register(
     "IconWidth", typeof(double), typeof(<class>), new PropertyMetadata(0));
-```
-```csharp
+    
 public double IconWidth
 {
     get { return (double)this.GetValue(IconWidthProperty); }
@@ -233,12 +230,11 @@ public double IconWidth
 }
 ```
 
-#### 2.1.8. [Standard] ICommand
+#### [Standard] ICommand
 ```csharp
 public static readonly DependencyProperty SelectionCommandProperty = DependencyProperty.Register(
     "SelectionCommand", typeof(ICommand), typeof(<class>));
-```
-```csharp
+    
 public ICommand SelectionCommand
 {
     get { return (ICommand)this.GetValue(SelectionCommandProperty); }
