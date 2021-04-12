@@ -98,7 +98,7 @@ Xaml 영역에서는 구조의 특성상 get을 사용할 수는 없지만 set�
 ## Did You Know That?
 - [x] DependencyProperty 속성은 일반적인 속성처럼 사용이 가능합니다. [확인](#using-property)
 - [x] Xaml 영역에서 접근이 가능한 대부분의 컨트롤 속성들은 DependencyProperty 입니다.
-- [ ] OverrideMetadata 재정의는 일반적으로 static 생성자에서 하는 것이 좋습니다.  [확인](#overrideMetadata)
+- [ ] OverrideMetadata 재정의는 일반적으로 static 생성자에서 하는 것이 좋습니다.  [확인](#override-metadata)
 - [x] DependencyProperty 속성 등록은 static 생성자에서 하는 것이 일반적입니다.
 - [x] 새로운 속성을 DependencyProperty를 통해 등록하기 위해서는 특별한 속성 래퍼(Wrapper) 선언이 필요합니다.
 - [x] WPF에서의 Value Binding은 오직 DependencyProperty를 통해 선언 된 속성만이 가능합니다.
