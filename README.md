@@ -1,31 +1,34 @@
 # DependencyProperty
 ### About us
-Contributors [Here.](https://devncore.org/aboutus/contributors)
 
-### DevNcore
-GitHub Organization [Here.](https://github.com/devncore)   
-Official Website [Here.](https://devncore.org) 
+> &nbsp; :adult: __James Lee__ &nbsp;&nbsp; [Github](https://github.com/devncore-james) &nbsp;&nbsp; james.lee@devncore.org  
+> &nbsp; :woman: __Elena Kim__ &nbsp;&nbsp; [Github](https://github.com/devncore-elena) &nbsp;&nbsp; elena.kim@devncore.org
+
+We are very ordinary developers, so we need to communicate with you.   
+You can always share information with us and we are looking forward to it.  
+
+##### _Open Source &nbsp; https://github.com/devncore/devncore   &nbsp;&nbsp;   Official Website &nbsp; https://devncore.org_ 
 
 ### License Policy
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
-<br />  
+***
 
 ## _What is the DependencyProperty?_
 The __DependencyProperty__ class is one of the most important design bases hidden deep in the .Net Framework WPF.
 
-This class is protected by sealed from the .Net Framework.
+This class is protected by `sealed` from the .NET Framework.
 This property differs from the one-dimensional general property in that it not only stores field values, but also takes advantage of the various functions provided within the class.
 Most importantly, there is a full foundation for data binding. You can also send notifications whenever you bind something.  
 
-The MVVM development methodology already has a limited set of DependencyProperty provided by the .Net Framework, so this technology is essential to more aggressive use of Binding.
+The MVVM development methodology already has a limited set of DependencyProperty provided by the .NET Framework, so this technology is essential to more aggressive use of Binding.
 
 
 ## Overview
 DependencyProperty is one of the key design elements of the WPF. This involves a combination of concepts and logical structures rather than a single function, requiring in-depth research and a somewhat higher degree of difficulty in the scope and depth of the technology.
 
-#### Class Version 
+### Class Version 
 The first target version of DependencyProperty is based on .NET Framework `3.0`
 
 | Target Name    | Version                                                                                  |
@@ -37,12 +40,12 @@ The first target version of DependencyProperty is based on .NET Framework `3.0`
 ##### _So, .NET Framework 2.0 doesn't allow us to use DependencyProperty?_   
 > That's right. WPF starts at 3.0. :smile:
 
-#### Class Information
+### Class Information
 | Assembly             | Namespace                   | Class Access        | Base Class      |
 |:---------------------|:----------------------------|:--------------------|:----------------|
 | WindowsBase.dll      | System.Windows              | `sealed`            | `Object`        |
 
-#### 1.3. Class Structure
+### Class Structure
 Access rights in the DependencyProperty class is `sealed` and have a structure that cannot be inherited directly from the custom class.
 
 ```csharp
@@ -54,11 +57,14 @@ namespace System.Windows
     }   
 }
 ```
+
+***
+
 ## Understanding DependencyProperty
-- [OverrideMetadata](#overridemetadata)
+- [OverrideMetadata Method](#overridemetadata-method)
 - [Using Property](#using-property)
 
-## OverrideMetadata Method
+### OverrideMetadata Method
 OverrideMetadata는 컨트롤(클래스)의 `Default` 값이나 ChangedCallback, CoerceValueCallback 방식을 재정의 할 수 있도록 하는 기능을 제공합니다. Metadata는 이미 DependencyProperty를 등록(Register)할 때 정의 하지만 이 메서드를 통해 다시 정의할 수 있기 때문에 CoerceValueCallback에 의해 내부적으로 처리되는 콜백 시스템을 재구성할 수 있습니다.
 ```csharp
 public class Pizza : Control
@@ -70,7 +76,7 @@ public class Pizza : Control
 }
 ```
 
-## Using Property
+### Using Property
 DependencyProperty 속성은 기본적으로 일반 속성처럼 사용이 가능합니다. 따라서 아래와 같이 `get`, `set`을 자유롭게 사용할 수 있습니다.
 ```csharp
 Button btn = new Button();
@@ -108,32 +114,30 @@ Xaml 영역에서는 구조의 특성상 get을 사용할 수는 없지만 set�
 - [x] DependencyProperty 속성은 INotifyPropertyChanged 방식보다 복잡하지만 대신 더욱 더 강력합니다.
 - [x] DependencyProperty는 충분히 WPF를 경험하고 배우는 것이 바람직합니다.
 - [x] Winform에서는 DependencyProperty가 존재하지 않습니다.
+<br />
 
-
-
-
+***
 ## Declaration
 DependencyProperty can be registered in two ways.
-- [Standard](#21-Standard)
-- [Extender](#22-Extender)
+- [Standard](#standard)
+- [Extender](#extender)
 
-### 2.1. Standard
+### Standard
 Standard method is to connect(register) directly to the `Owner UI` class through the `DependencyProperty.Register` method.
-- [Int](#211-Standard-Int)
-- [Boolean](#212-Standard-Boolean)
-- [String](#213-String-Type)
-- [Object](#214-Object-Type)
-- [Geometry](#215-Geometry-Type)
-- [Brush](#216-Brush-Type)
-- [Double](#217-Double-Type)
-- [ICommand](#218-ICommand-Type)
+- [Int](#standard-int)
+- [Boolean](#standard-boolean)
+- [String](#string-type)
+- [Object](#object-type)
+- [Geometry](#geometry-type)
+- [Brush](#brush-type)
+- [Double](#double-type)
+- [ICommand](#icommand-type)
 
-#### 2.1.1. [Standard] Int
+#### [Standard] Int
 ```csharp
 public static readonly DependencyProperty AgeProperty = DependencyProperty.Register(
     "Age", typeof(int), typeof(<class>), new PropertyMetadata(0));
-```
-```csharp
+    
 public int Age
 {
     get { return (int)this.GetValue(AgeProperty); }
