@@ -243,8 +243,8 @@ public ICommand SelectionCommand
 ```
 <br />
 
-### 2.2. Extender
-#### 2.2.1. [Extender] String
+### Extender
+#### [Extender] String
 ```csharp
 class PasswordExtender
 {
