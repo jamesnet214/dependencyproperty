@@ -338,9 +338,6 @@ private static void OnPasswordPropertyChanged(DependencyObject sender, Dependenc
 
 
 ### References
-#### 📘 WPF Tutorial  
-&nbsp;&nbsp; 🔖 DependencyProperties [here.](https://www.wpftutorial.net/DependencyProperties.html)   
-#### 📘 SO Documentation
-&nbsp;&nbsp; 🔖 Dependency-Properties [here.](https://sodocumentation.net/wpf/topic/2914/dependency-properties)   
-#### 📘 Microsoft Docs
-&nbsp;&nbsp; 🔖 DependencyProperty Class [Here.](https://docs.microsoft.com/ko-kr/dotnet/api/system.windows.dependencyproperty?view=netframework-4.8)   
+ [:blue_book:](https://www.wpftutorial.net/DependencyProperties.html) **WPF Tutorial** &nbsp; DependencyProperties   
+ [:blue_book:](https://sodocumentation.net/wpf/topic/2914/dependency-properties) **SO Documentation** &nbsp; Dependency-Properties
+ [:blue_book:](https://docs.microsoft.com/ko-kr/dotnet/api/system.windows.dependencyproperty?view=netframework-4.8) **Microsoft Docs** &nbsp; DependencyProperty Class
