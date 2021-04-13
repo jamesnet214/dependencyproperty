@@ -93,7 +93,8 @@ public class Pizza : Control
 {
     static Pizza()
     {
-        DefaultStyleKeyProperty.OverrideMetadata(typeof(Pizza), new PropertyMetadata(typeof(Pizza));
+        DefaultStyleKeyProperty.OverrideMetadata(typeof(Pizza), 
+            new PropertyMetadata(typeof(Pizza));
     }
 }
 ```
