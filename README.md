@@ -20,7 +20,7 @@ You can always share information with us and we are looking forward to it.
 - [Version](#class-version)
 - [Information](#class-information)
 - [Structure](#class-structure)
-- [Understanding](#Understanding DependencyProperty)
+- [Understanding](#understanding-dependencyproperty)
 
 ## _What is the DependencyProperty?_
 The __DependencyProperty__ class is one of the most important design bases hidden deep in the .Net Framework WPF.
