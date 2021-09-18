@@ -19,21 +19,10 @@ DependencyProperty 클래스는 깊은 곳에 숨겨져 있는 WPF에서 가장 
 
 이 클래스는 `Sealed`를 통해 보호됩니다. 이 속성은 필드 값을 저장할 뿐만 아니라 클래스 내에서 제공되는 다양한 기능을 활용한다는 점에서 1차원 일반 속성과 다릅니다. 가장 중요한 것은 데이터 바인딩 사용에 대한 기반을 가지고 있다는 것입니다. 또한 바인딩할 때마다 알림(Callback)을 구현할 수도 있습니다.
 
-그리고 MVVM 패턴 방법론을 통한 개발과 매우 밀접한 연관성을 갖고 있기 때문에 이 기술은 바인딩을 보다 적극적으로 사용하는 데 필수적입니다.
-
-The __DependencyProperty__ class is one of the most important design bases hidden deep in the .Net Framework WPF.
-
-This class is protected by `sealed` from the .NET Framework.
-This property differs from the one-dimensional general property in that it not only stores field values, but also takes advantage of the various functions provided within the class.
-Most importantly, there is a full foundation for data binding. You can also send notifications whenever you bind something.  
-
-The MVVM development methodology already has a limited set of DependencyProperty provided by the .NET Framework, so this technology is essential to more aggressive use of Binding.
-
+이러한 특성 덕분에 이 기술은 바인딩을 보다 적극적으로 사용하는 데 필수적입니다. 또한 MVVM 패턴을 통한 개발을 제대로 하기 위해서도 반드시 잘 활용할 수 있어야 합니다.
 
 ## Overview
 DependencyProperty는 WPF의 핵심 설계 요소 중 하나이다. 여기에는 단일 기능보다는 개념과 논리적 구조의 조합이 포함되며, 심도 있는 연구와 기술의 범위와 깊이에서 다소 높은 수준의 난이도를 필요로 합니다.
-
-<br />
 
 ### Class Version 
 The first target version of DependencyProperty is based on .NET Framework `3.0`
