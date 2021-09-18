@@ -54,7 +54,7 @@ namespace System.Windows
 
 ***
 
-## Understanding DependencyProperty
+## DependencyProperty를 얼마나 알고 있습니까?
 
 - [x] DependencyProperty 속성은 일반적인 속성처럼 사용이 가능합니다. [확인](#using-property)
 - [x] Xaml 영역에서 접근이 가능한 대부분의 컨트롤 속성들은 DependencyProperty 입니다.
