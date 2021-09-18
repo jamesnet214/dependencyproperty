@@ -1,8 +1,26 @@
-# DependencyProperty
-이 레포지터리는 **DependencyProperty**에 대한 심도있는 내용을 다루고 있습니다.
+<div align=center>
+  <h2>DependencyProperty</h2>
+  <sub>이 레포지터리는 <code>DependencyProperty</code>에 대한 심도있는 내용을 다루고 있습니다.</sub> 
+  <br/>
+  <br/>
+ 
+  <sub align="center">
+    이 레포지토리는 DevNcore팀이 관리하고 있습니다.
+  <br />
+  <a href="https://github.com/devncore/devncore"><strong>더 알아보기 »</strong></a>
+  </sub>
+ 
+  <br />
+  <br />
+ 
+  <p align="center">
+   <a href="https://github.com/devncore/dependencyproperty/stargazers"><img src="https://img.shields.io/github/stars/devncore/dependencyproperty" alt="Github Stars"></a>
+   <img src="https://img.shields.io/github/license/devncore/dependencyproperty" alt="License">
+   <a href="https://github.com/devncore/dependencyproperty/pulse"><img src="https://img.shields.io/github/commit-activity/m/devncore/dependencyproperty" alt="Commits-per-month"></a>
+ </p>
+</div>
 
-## 만든이 소개
-이 레포지토리는 [DevNcore 오픈소스 팀](https://github.com/devncore/devncore)이 리드하고 있습니다.
+  <br />
 
 ## Contents
 - [Overview](#overview)
