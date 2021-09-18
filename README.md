@@ -1,14 +1,12 @@
 <div align=center>
   <h2>DependencyProperty</h2>
-  <sub>이 레포지터리는 <code>DependencyProperty</code>에 대한 심도있는 내용을 다루고 있습니다.</sub> 
+  이 레포지터리는 <code>DependencyProperty</code>에 대한 심도있는 내용을 다루고 있습니다.
   <br/>
   <br/>
  
-  <sub align="center">
-    이 레포지토리는 DevNcore팀이 관리하고 있습니다.
+  이 레포지토리는 DevNcore팀이 관리하고 있습니다.
   <br />
   <a href="https://github.com/devncore/devncore"><strong>더 알아보기 »</strong></a>
-  </sub>
  
   <br />
   <br />
