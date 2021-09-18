@@ -1,14 +1,10 @@
 # DependencyProperty
 이 레포지터리는 **DependencyProperty**에 대한 심도있는 내용을 다루고 있습니다.
 
-<br />
-
 ## 만든이 소개
 이 레포지토리는 [DevNcore 오픈소스 팀](https://github.com/devncore/devncore)이 리드하고 있습니다.
 
-<br />
-
-# Contents
+# 목차
 - [Overview](#overview)
 - [Version](#class-version)
 - [Information](#class-information)
