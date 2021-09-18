@@ -31,7 +31,9 @@ The MVVM development methodology already has a limited set of DependencyProperty
 
 
 ## Overview
-DependencyProperty is one of the key design elements of the WPF. This involves a combination of concepts and logical structures rather than a single function, requiring in-depth research and a somewhat higher degree of difficulty in the scope and depth of the technology.
+DependencyProperty는 WPF의 핵심 설계 요소 중 하나이다. 여기에는 단일 기능보다는 개념과 논리적 구조의 조합이 포함되며, 심도 있는 연구와 기술의 범위와 깊이에서 다소 높은 수준의 난이도를 필요로 합니다.
+
+<br />
 
 ### Class Version 
 The first target version of DependencyProperty is based on .NET Framework `3.0`
