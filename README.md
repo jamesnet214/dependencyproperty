@@ -1,4 +1,5 @@
 # DependencyProperty
+이 레포지터리는 **DependencyProperty**에 대한 심도있는 내용을 다루고 있습니다.
 
 <br />
 
