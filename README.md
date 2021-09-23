@@ -9,7 +9,6 @@
   <a href="https://github.com/devncore/devncore"><strong>더 알아보기 »</strong></a>
  
   <br />
-  <br />
  
   <p align="center">
    <a href="https://github.com/devncore/dependencyproperty/stargazers"><img src="https://img.shields.io/github/stars/devncore/dependencyproperty" alt="Github Stars"></a>
