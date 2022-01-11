@@ -3,7 +3,7 @@
   
 이 리포지토리는 WPF DependencyPropery (의존 속성) 클래스의 개념과 기술을 활용하는데 필요한 설명을 다루는 Article입니다.
 
-<a href="https://github.com/devncore/devncore"><strong>이 글의 기여자 »</strong></a>
+<a href="https://github.com/devncore/devncore"><strong>이 글의 Contributors »</strong></a>
   
 | Star | License | Activity |
 |:----:|:-------:|:--------:|
