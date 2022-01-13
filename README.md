@@ -2,11 +2,13 @@
   
 이 리포지토리는 WPF DependencyPropery (의존 속성) 클래스의 개념과 기술을 활용하는데 필요한 설명을 다루는 Article입니다.
 
-<a href="https://github.com/devncore/devncore"><strong>이 글의 Contributors »</strong></a>
+<a href="https://github.com/devncore/devncore"><strong>더 알아보기 »</strong></a>
   
 | Star | License | Activity |
 |:----:|:-------:|:--------:|
 | <a href="https://github.com/devncore/dependencyproperty/stargazers"><img src="https://img.shields.io/github/stars/devncore/dependencyproperty" alt="Github Stars"></a> | <img src="https://img.shields.io/github/license/devncore/dependencyproperty" alt="License"> | <a href="https://github.com/devncore/dependencyproperty/pulse"><img src="https://img.shields.io/github/commit-activity/m/devncore/dependencyproperty" alt="Commits-per-month"></a> |
+
+<br />
 
 ## 내용
 - [Overview](#overview)
