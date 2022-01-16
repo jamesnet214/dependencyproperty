@@ -27,17 +27,17 @@ DependencyProperty 클래스는 깊은 곳에 숨겨져 있는 WPF에서 가장 
 ## Overview
 DependencyProperty는 WPF의 핵심 설계 요소 중 하나이다. 여기에는 단일 기능보다는 개념과 논리적 구조의 조합이 포함되며, 심도 있는 연구와 기술의 범위와 깊이에서 다소 높은 수준의 난이도를 필요로 합니다.
 
-### Class Version 
-The first target version of DependencyProperty is based on .NET Framework `3.0`
+### 클래스 버전
+DependencyProperty의 첫 번째 대상 버전은 `.NET Framework '3.0'`에 기반을 두고 있습니다.
 
 | Target Name    | Version                                                                                  |
 |:---------------|:-----------------------------------------------------------------------------------------|
-| .NET           | 5.0                                                                                      |
+| .NET           | 5.0, 6.0                                                                                      |
 | .NET Core      | 3.0, 3.1                                                                                 |
 | .NET Framework | 3.0, 3.5, 4.0, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8              |
 
-##### _So, .NET Framework 2.0 doesn't allow us to use DependencyProperty?_   
-> That's right. WPF starts at 3.0. :smile:
+##### _그래서 .NET Framework 2.0에서는 DependencyProperty를 사용할 수 없습니까?_   
+> 맞아요! WPF는 3.0부터 시작합니다.
 
 ### Class Information
 | Assembly             | Namespace                   | Class Access        | Base Class      |
