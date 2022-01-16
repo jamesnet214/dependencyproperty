@@ -42,7 +42,7 @@ DependencyProperty의 첫 번째 대상 버전은 `.NET Framework '3.0'`에 기�
 ### 클래스 정보
 | 어셈블리              | 네임스페이스                 | 클래스 재선언 여부   | 부모 클래스       |
 |:---------------------|:----------------------------|:--------------------|:----------------|
-| WindowsBase.dll      | System.Windows              | `sealed`            | `Object`        |
+| WindowsBase.dll      | System.Windows              | sealed            | Object        |
 
 ### Class Structure
 Access rights in the DependencyProperty class is `sealed` and have a structure that cannot be inherited directly from the custom class.
