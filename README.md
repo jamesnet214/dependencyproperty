@@ -39,8 +39,8 @@ DependencyProperty의 첫 번째 대상 버전은 `.NET Framework '3.0'`에 기�
 ##### _그래서 .NET Framework 2.0에서는 DependencyProperty를 사용할 수 없습니까?_   
 > 맞아요! WPF는 3.0부터 시작합니다.
 
-### Class Information
-| Assembly             | Namespace                   | Class Access        | Base Class      |
+### 클래스 정보
+| 어셈블리              | 네임스페이스                 | 클래스 재선언 여부   | 부모 클래스       |
 |:---------------------|:----------------------------|:--------------------|:----------------|
 | WindowsBase.dll      | System.Windows              | `sealed`            | `Object`        |
 
