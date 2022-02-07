@@ -11,7 +11,7 @@
 <br />
 
 ## DependencyProperty란? 
-DependencyProperty 클래스는 .Net Framework WPF 깊숙히 숨겨져 있는 가장 중요한 설계 기반 중 하나입니다.
+DependencyProperty 클래스는 .Net Framework WPF  깊숙히 숨겨져 있는 가장 중요한 설계 기반 중 하나입니다.
 
 이 클래스는 .Net Framework에서 `sealed`를 통해 보호됩니다. 이 속성은 필드 값을 저장할 뿐만 아니라 클래스 내에서 제공되는 다양한 기능을 활용한다는 점에서 1차원적인 일반적 속성과 다릅니다. 가장 중요한 것은 데이터 바인딩 사용에 대한 기반을 가지고 있다는 것입니다. 또한 바인딩할 때마다 알림(Callback)을 구현할 수도 있습니다.
 
@@ -243,8 +243,8 @@ private static void OnPasswordPropertyChanged(DependencyObject sender, Dependenc
 ## DependencyProperty를 얼마나 알고 있습니까?
 
 - [x] DependencyProperty 속성은 일반적인 속성처럼 사용이 가능합니다. [확인](#using-property)
+- [ ] OverrideMetadata 재정의는 일반적으로 static 생성자에서 하는 것이 좋습니다.  [확인](#overridemetadata-method)
 - [x] Xaml 영역에서 접근이 가능한 대부분의 컨트롤 속성들은 DependencyProperty 입니다.
-- [ ] OverrideMetadata 재정의는 일반적으로 static 생성자에서 하는 것이 좋습니다.  [확인](#override-metadata)
 - [x] DependencyProperty 속성 등록은 static 생성자에서 하는 것이 일반적입니다.
 - [x] 새로운 속성을 DependencyProperty를 통해 등록하기 위해서는 특별한 속성 래퍼(Wrapper) 선언이 필요합니다.
 - [x] WPF에서의 Value Binding은 오직 DependencyProperty를 통해 선언 된 속성만이 가능합니다.
@@ -264,20 +264,6 @@ private static void OnPasswordPropertyChanged(DependencyObject sender, Dependenc
 - [x] Winform에서는 DependencyProperty가 존재하지 않습니다.
 <br />
 
-### OverrideMetadata Method
-OverrideMetadata는 컨트롤(클래스)의 `Default` 값이나 ChangedCallback, CoerceValueCallback 방식을 재정의 할 수 있도록 하는 기능을 제공합니다. Metadata는 이미 DependencyProperty를 등록(Register)할 때 정의 하지만 이 메서드를 통해 다시 정의할 수 있기 때문에 CoerceValueCallback에 의해 내부적으로 처리되는 콜백 시스템을 재구성할 수 있습니다.
-
-```csharp
-public class Pizza : Control
-{
-    static Pizza()
-    {
-        DefaultStyleKeyProperty.OverrideMetadata(typeof(Pizza), 
-            new PropertyMetadata(typeof(Pizza));
-    }
-}
-```
-
 ### Using Property
 DependencyProperty 속성은 기본적으로 일반 속성처럼 사용이 가능합니다. 따라서 아래와 같이 `get`, `set`을 자유롭게 사용할 수 있습니다.
 ```csharp
@@ -293,6 +279,20 @@ string Content = btn.Content.ToString();
 Xaml 영역에서는 구조의 특성상 get을 사용할 수는 없지만 set은 마찬가지로 기본 속성처럼 자유롭게 사용할 수 있습니다.
 ```xaml
 <Button Content="Elena" Width="100" Height="50"/>
+```
+
+### OverrideMetadata Method
+OverrideMetadata는 컨트롤(클래스)의 `Default` 값이나 ChangedCallback, CoerceValueCallback 방식을 재정의 할 수 있도록 하는 기능을 제공합니다. Metadata는 이미 DependencyProperty를 등록(Register)할 때 정의 하지만 이 메서드를 통해 다시 정의할 수 있기 때문에 CoerceValueCallback에 의해 내부적으로 처리되는 콜백 시스템을 재구성할 수 있습니다.
+
+```csharp
+public class Pizza : Control
+{
+    static Pizza()
+    {
+        DefaultStyleKeyProperty.OverrideMetadata(typeof(Pizza), 
+            new PropertyMetadata(typeof(Pizza));
+    }
+}
 ```
 <br />
 
