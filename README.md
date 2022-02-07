@@ -1,6 +1,6 @@
 ## DependencyProperty
   
-이 리포지토리는 WPF DependencyPropery (의존 속성) 클래스의 개념과 기술을 활용하는데 필요한 설명을 다루는 Article입니다.
+이 리포지토리는 WPF DependencyPropery (의존 속성) 클래스의 개념과 기술을 활용하는데 필요한 설명을 다루는 리포지토리입니다.
 
 <a href="https://github.com/devncore/devncore"><strong>더 알아보기 »</strong></a>
   
@@ -10,34 +10,22 @@
 
 <br />
 
-## 내용
-- [Overview](#overview)
-- [Version](#class-version)
-- [Information](#class-information)
-- [Structure](#class-structure)
-- [Understanding](#understanding-dependencyproperty)
-
-## _What is the DependencyProperty?_
+## DependencyProperty란? 
 DependencyProperty 클래스는 깊은 곳에 숨겨져 있는 WPF에서 가장 중요한 설계 기반 중 하나입니다.
 
 이 클래스는 `Sealed`를 통해 보호됩니다. 이 속성은 필드 값을 저장할 뿐만 아니라 클래스 내에서 제공되는 다양한 기능을 활용한다는 점에서 1차원 일반 속성과 다릅니다. 가장 중요한 것은 데이터 바인딩 사용에 대한 기반을 가지고 있다는 것입니다. 또한 바인딩할 때마다 알림(Callback)을 구현할 수도 있습니다.
 
 이러한 특성 덕분에 이 기술은 바인딩을 보다 적극적으로 사용하는 데 필수적입니다. 또한 MVVM 패턴을 통한 개발을 제대로 하기 위해서도 반드시 잘 활용할 수 있어야 합니다.
 
-## Overview
-DependencyProperty는 WPF의 핵심 설계 요소 중 하나이다. 여기에는 단일 기능보다는 개념과 논리적 구조의 조합이 포함되며, 심도 있는 연구와 기술의 범위와 깊이에서 다소 높은 수준의 난이도를 필요로 합니다.
 
 ### 클래스 버전
 DependencyProperty의 첫 번째 대상 버전은 `.NET Framework '3.0'`에 기반을 두고 있습니다.
 
 | Target Name    | Version                                                                                  |
 |:---------------|:-----------------------------------------------------------------------------------------|
-| .NET           | 5.0 ~ 6.0                                                                                      |
+| .NET           | 5.0 ~ 6.0                                                                                 |
 | .NET Core      | 3.0 ~ 3.1                                                                                 |
 | .NET Framework | 3.0 ~ 4.8 |
-
-##### _그래서 .NET Framework 2.0에서는 DependencyProperty를 사용할 수 없습니까?_   
-> 맞아요! WPF는 3.0부터 시작합니다.
 
 ### 클래스 정보
 | 어셈블리              | 네임스페이스                 | 클래스 재선언 여부   | 부모 클래스       |
