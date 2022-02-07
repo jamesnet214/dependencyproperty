@@ -11,12 +11,11 @@
 <br />
 
 ## DependencyProperty란? 
-DependencyProperty 클래스는 깊은 곳에 숨겨져 있는 WPF에서 가장 중요한 설계 기반 중 하나입니다.
+DependencyProperty 클래스는 .Net Framework WPF 깊숙히 숨겨져 있는 가장 중요한 설계 기반 중 하나입니다.
 
-이 클래스는 `Sealed`를 통해 보호됩니다. 이 속성은 필드 값을 저장할 뿐만 아니라 클래스 내에서 제공되는 다양한 기능을 활용한다는 점에서 1차원 일반 속성과 다릅니다. 가장 중요한 것은 데이터 바인딩 사용에 대한 기반을 가지고 있다는 것입니다. 또한 바인딩할 때마다 알림(Callback)을 구현할 수도 있습니다.
+이 클래스는 .Net Framework에서 `sealed`를 통해 보호됩니다. 이 속성은 필드 값을 저장할 뿐만 아니라 클래스 내에서 제공되는 다양한 기능을 활용한다는 점에서 1차원적인 일반적 속성과 다릅니다. 가장 중요한 것은 데이터 바인딩 사용에 대한 기반을 가지고 있다는 것입니다. 또한 바인딩할 때마다 알림(Callback)을 구현할 수도 있습니다.
 
-이러한 특성 덕분에 이 기술은 바인딩을 보다 적극적으로 사용하는 데 필수적입니다. 또한 MVVM 패턴을 통한 개발을 제대로 하기 위해서도 반드시 잘 활용할 수 있어야 합니다.
-
+이러한 특성 덕분에 이 기술은 바인딩을 더욱 적극적으로 사용하는 데 필수적입니다. 또한 MVVM 패턴을 통한 개발을 제대로 하기 위해서도 반드시 잘 활용할 수 있어야 합니다.
 
 ### 클래스 버전
 DependencyProperty의 첫 번째 대상 버전은 `.NET Framework '3.0'`에 기반을 두고 있습니다.
@@ -46,67 +45,7 @@ namespace System.Windows
 ```
 <br />
 
-***
-
-## DependencyProperty를 얼마나 알고 있습니까?
-
-- [x] DependencyProperty 속성은 일반적인 속성처럼 사용이 가능합니다. [확인](#using-property)
-- [x] Xaml 영역에서 접근이 가능한 대부분의 컨트롤 속성들은 DependencyProperty 입니다.
-- [ ] OverrideMetadata 재정의는 일반적으로 static 생성자에서 하는 것이 좋습니다.  [확인](#override-metadata)
-- [x] DependencyProperty 속성 등록은 static 생성자에서 하는 것이 일반적입니다.
-- [x] 새로운 속성을 DependencyProperty를 통해 등록하기 위해서는 특별한 속성 래퍼(Wrapper) 선언이 필요합니다.
-- [x] WPF에서의 Value Binding은 오직 DependencyProperty를 통해 선언 된 속성만이 가능합니다.
-- [x] DependencyProperty 속성은 기본적으로 상위(부모)로 부터 값을 물려받을 수 있습니다.
-- [x] Element Binding 대상과 타겟 속성 모두 반드시 DependencyProperty  가능합니다.
-- [x] WPF는 DependencyProperty 고유의 의존 속성 덕분에 속성 값의 양을 엄청나게 줄일 수 있게 되었습니다.
-- [x] DependencyProperty 클래스는 public set 속성이 단 하나도 존재하지 않습니다.
-- [x] DependencyProperty 클래스는 public 생성자가 없기 때문에 인스턴스를 생성할 수가 없습니다.
-- [x] DependencyProperty 클래스는 sealed 한정자로부터 보호받고 있기 때문에 클래스 상속이 불가능합니다.
-- [x] DependencyProperty는 WPF .NET Framework에서 가장 많이 선언되어있는 클래스입니다.
-- [x] CoerceValueCallback 이벤트를 통해 관련 값을 강제로 변환하도록 호출할 수 있습니다.
-- [x] static Register메서드는 총 3개의 Override 파라메터 형태를 제공합니다.
-- [x] DependencyProperty는 2개의 재정의 된 Override 메서드가 존재합니다. `GetHashCode()` `ToString()`
-- [x] 사실 DependencyProperty 속성의 .ToString() 값은 일반 속성과 다를 바가 없습니다.
-- [x] DependencyProperty 속성은 INotifyPropertyChanged 방식보다 복잡하지만 대신 더욱 더 강력합니다.
-- [x] DependencyProperty는 충분히 WPF를 경험하고 배우는 것이 바람직합니다.
-- [x] Winform에서는 DependencyProperty가 존재하지 않습니다.
-<br />
-
-### OverrideMetadata Method
-OverrideMetadata는 컨트롤(클래스)의 `Default` 값이나 ChangedCallback, CoerceValueCallback 방식을 재정의 할 수 있도록 하는 기능을 제공합니다. Metadata는 이미 DependencyProperty를 등록(Register)할 때 정의 하지만 이 메서드를 통해 다시 정의할 수 있기 때문에 CoerceValueCallback에 의해 내부적으로 처리되는 콜백 시스템을 재구성할 수 있습니다.
-
-```csharp
-public class Pizza : Control
-{
-    static Pizza()
-    {
-        DefaultStyleKeyProperty.OverrideMetadata(typeof(Pizza), 
-            new PropertyMetadata(typeof(Pizza));
-    }
-}
-```
-
-### Using Property
-DependencyProperty 속성은 기본적으로 일반 속성처럼 사용이 가능합니다. 따라서 아래와 같이 `get`, `set`을 자유롭게 사용할 수 있습니다.
-```csharp
-Button btn = new Button();
-btn.Content = "James";
-btn.Width = 100;
-btn.Height = 50;
-double width = btn.Width;
-double height = btn.Height;
-string Content = btn.Content.ToString();
-```
-
-Xaml 영역에서는 구조의 특성상 get을 사용할 수는 없지만 set은 마찬가지로 기본 속성처럼 자유롭게 사용할 수 있습니다.
-```xaml
-<Button Content="Elena" Width="100" Height="50"/>
-```
-<br />
-
-***
-
-## Declaration
+## DependencyProperty 구현
 
 ### Int
 ```csharp
@@ -173,7 +112,8 @@ class PasswordExtender
 
 It is actually the same as the Content Property included in the `ContentControl` class.  
 If you inherit ContentControl and create a control that defines ContentPresenter, use Object-type DependencyProperty.
-
+ - **`Content`** in `ContentControl` _(Button, CheckBox, UserControl, Window ···)_  
+ - **`Tag`** in `Control` _(Button, Window, Grid, StackPanel ···)_
 ```csharp
 public static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
     "Content", typeof(object), typeof(<class>), new PropertyMetadata(""));
@@ -185,11 +125,8 @@ public object Content
 }
 ```
 
- #### ✔️ Properties
- - **`Content`** in `ContentControl` _(Button, CheckBox, UserControl, Window ···)_  
- - **`Tag`** in `Control` _(Button, Window, Grid, StackPanel ···)_
-
 ### Geometry
+ - **`Data`** in `Path`
 ```csharp
 public static readonly DependencyProperty DataProperty = DependencyProperty.Register(
     "Data", typeof(Geometry), typeof(<class>), new PropertyMetadata(null));
@@ -200,9 +137,6 @@ public Geometry Data
     set { this.SetValue(DataProperty, value); }
 }
 ```
-
- #### ✔️ Properties
- - **`Data`** in `Path`
 
 ### Brush
 ```csharp
@@ -305,7 +239,66 @@ private static void OnPasswordPropertyChanged(DependencyObject sender, Dependenc
 ```
 <br />
 
-### References
+
+## DependencyProperty를 얼마나 알고 있습니까?
+
+- [x] DependencyProperty 속성은 일반적인 속성처럼 사용이 가능합니다. [확인](#using-property)
+- [x] Xaml 영역에서 접근이 가능한 대부분의 컨트롤 속성들은 DependencyProperty 입니다.
+- [ ] OverrideMetadata 재정의는 일반적으로 static 생성자에서 하는 것이 좋습니다.  [확인](#override-metadata)
+- [x] DependencyProperty 속성 등록은 static 생성자에서 하는 것이 일반적입니다.
+- [x] 새로운 속성을 DependencyProperty를 통해 등록하기 위해서는 특별한 속성 래퍼(Wrapper) 선언이 필요합니다.
+- [x] WPF에서의 Value Binding은 오직 DependencyProperty를 통해 선언 된 속성만이 가능합니다.
+- [x] DependencyProperty 속성은 기본적으로 상위(부모)로 부터 값을 물려받을 수 있습니다.
+- [x] Element Binding 대상과 타겟 속성 모두 반드시 DependencyProperty  가능합니다.
+- [x] WPF는 DependencyProperty 고유의 의존 속성 덕분에 속성 값의 양을 엄청나게 줄일 수 있게 되었습니다.
+- [x] DependencyProperty 클래스는 public set 속성이 단 하나도 존재하지 않습니다.
+- [x] DependencyProperty 클래스는 public 생성자가 없기 때문에 인스턴스를 생성할 수가 없습니다.
+- [x] DependencyProperty 클래스는 sealed 한정자로부터 보호받고 있기 때문에 클래스 상속이 불가능합니다.
+- [x] DependencyProperty는 WPF .NET Framework에서 가장 많이 선언되어있는 클래스입니다.
+- [x] CoerceValueCallback 이벤트를 통해 관련 값을 강제로 변환하도록 호출할 수 있습니다.
+- [x] static Register메서드는 총 3개의 Override 파라메터 형태를 제공합니다.
+- [x] DependencyProperty는 2개의 재정의 된 Override 메서드가 존재합니다. `GetHashCode()` `ToString()`
+- [x] 사실 DependencyProperty 속성의 .ToString() 값은 일반 속성과 다를 바가 없습니다.
+- [x] DependencyProperty 속성은 INotifyPropertyChanged 방식보다 복잡하지만 대신 더욱 더 강력합니다.
+- [x] DependencyProperty는 충분히 WPF를 경험하고 배우는 것이 바람직합니다.
+- [x] Winform에서는 DependencyProperty가 존재하지 않습니다.
+<br />
+
+### OverrideMetadata Method
+OverrideMetadata는 컨트롤(클래스)의 `Default` 값이나 ChangedCallback, CoerceValueCallback 방식을 재정의 할 수 있도록 하는 기능을 제공합니다. Metadata는 이미 DependencyProperty를 등록(Register)할 때 정의 하지만 이 메서드를 통해 다시 정의할 수 있기 때문에 CoerceValueCallback에 의해 내부적으로 처리되는 콜백 시스템을 재구성할 수 있습니다.
+
+```csharp
+public class Pizza : Control
+{
+    static Pizza()
+    {
+        DefaultStyleKeyProperty.OverrideMetadata(typeof(Pizza), 
+            new PropertyMetadata(typeof(Pizza));
+    }
+}
+```
+
+### Using Property
+DependencyProperty 속성은 기본적으로 일반 속성처럼 사용이 가능합니다. 따라서 아래와 같이 `get`, `set`을 자유롭게 사용할 수 있습니다.
+```csharp
+Button btn = new Button();
+btn.Content = "James";
+btn.Width = 100;
+btn.Height = 50;
+double width = btn.Width;
+double height = btn.Height;
+string Content = btn.Content.ToString();
+```
+
+Xaml 영역에서는 구조의 특성상 get을 사용할 수는 없지만 set은 마찬가지로 기본 속성처럼 자유롭게 사용할 수 있습니다.
+```xaml
+<Button Content="Elena" Width="100" Height="50"/>
+```
+<br />
+
+***
+
+## References
  [:bookmark_tabs:](https://www.wpftutorial.net/DependencyProperties.html) **WPF Tutorial** &nbsp; <ins>DependencyProperties</ins>   
  [:bookmark_tabs:](https://sodocumentation.net/wpf/topic/2914/dependency-properties) **SO Documentation** &nbsp; <ins>Dependency-Properties</ins>   
  [:bookmark_tabs:](https://docs.microsoft.com/ko-kr/dotnet/api/system.windows.dependencyproperty?view=netframework-4.8) **Microsoft Docs** &nbsp; <ins>DependencyProperty Class</ins> 
