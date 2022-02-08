@@ -11,7 +11,7 @@
 <br />
 
 ## DependencyProperty란? 
-DependencyProperty 클래스는 .Net Framework WPF  깊숙히 숨겨져 있는 가장 중요한 설계 기반 중 하나입니다.
+DependencyProperty 클래스는 WPF .Net Framework 내부에 숨겨져 있는 가장 중요한 설계 기반 중 하나입니다.
 
 이 클래스는 .Net Framework에서 `sealed`를 통해 보호됩니다. 이 속성은 필드 값을 저장할 뿐만 아니라 클래스 내에서 제공되는 다양한 기능을 활용한다는 점에서 1차원적인 일반적 속성과 다릅니다. 가장 중요한 것은 데이터 바인딩 사용에 대한 기반을 가지고 있다는 것입니다. 또한 바인딩할 때마다 알림(Callback)을 구현할 수도 있습니다.
 
@@ -32,7 +32,7 @@ DependencyProperty의 첫 번째 대상 버전은 `.NET Framework '3.0'`에 기�
 | WindowsBase.dll      | System.Windows              | sealed            | Object        |
 
 ### Class Structure
-DependencyProperty 클래스의 액세스 권한은 **Sealed**를 통해 보호되고 있으며 사용자 지정 클래스에서 직접 상속할 수 없는 구조를 가지고 있습니다.
+DependencyProperty 클래스의 액세스 권한은 **sealed**를 통해 보호되고 있으며 사용자 지정 클래스에서 직접 상속할 수 없는 구조를 가지고 있습니다.
 
 ```csharp
 namespace System.Windows
@@ -266,6 +266,7 @@ private static void OnPasswordPropertyChanged(DependencyObject sender, Dependenc
 
 ### Using Property
 DependencyProperty 속성은 기본적으로 일반 속성처럼 사용이 가능합니다. 따라서 아래와 같이 `get`, `set`을 자유롭게 사용할 수 있습니다.
+
 ```csharp
 Button btn = new Button();
 btn.Content = "James";
@@ -282,7 +283,7 @@ Xaml 영역에서는 구조의 특성상 get을 사용할 수는 없지만 set�
 ```
 
 ### OverrideMetadata Method
-OverrideMetadata는 컨트롤(클래스)의 `Default` 값이나 ChangedCallback, CoerceValueCallback 방식을 재정의 할 수 있도록 하는 기능을 제공합니다. Metadata는 이미 DependencyProperty를 등록(Register)할 때 정의 하지만 이 메서드를 통해 다시 정의할 수 있기 때문에 CoerceValueCallback에 의해 내부적으로 처리되는 콜백 시스템을 재구성할 수 있습니다.
+OverrideMetadata는 컨트롤(클래스)의 `Default` 값이나 ChangedCallback, CoerceValueCallback 방식을 재정의할 수 있도록 하는 기능을 제공합니다. Metadata는 이미 DependencyProperty를 등록(Register)할 때 정의하지만 이 메서드를 통해 재정의할 수 있기 때문에 CoerceValueCallback에 의해 내부적으로 처리되는 콜백 시스템을 재구성할 수 있습니다.
 
 ```csharp
 public class Pizza : Control
@@ -299,8 +300,7 @@ public class Pizza : Control
 ***
 
 ## References
- [:bookmark_tabs:](https://www.wpftutorial.net/DependencyProperties.html) **WPF Tutorial** &nbsp; <ins>DependencyProperties</ins>   
- [:bookmark_tabs:](https://sodocumentation.net/wpf/topic/2914/dependency-properties) **SO Documentation** &nbsp; <ins>Dependency-Properties</ins>   
- [:bookmark_tabs:](https://docs.microsoft.com/ko-kr/dotnet/api/system.windows.dependencyproperty?view=netframework-4.8) **Microsoft Docs** &nbsp; <ins>DependencyProperty Class</ins> 
- 
+📑  **[WPF Tutorial](https://www.wpftutorial.net/DependencyProperties.html)** &nbsp; DependencyProperties  
+📑  **[SO Documentation](https://sodocumentation.net/wpf/topic/2914/dependency-properties)** &nbsp; Dependency-Properties   
+📑  **[Microsoft Docs](https://docs.microsoft.com/ko-kr/dotnet/api/system.windows.dependencyproperty?view=netframework-4.8)** &nbsp; DependencyProperty Class
  
